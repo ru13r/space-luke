@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Security.Cryptography;
 using UnityEngine;
 
 public class DestroyOffscreen : MonoBehaviour
@@ -15,7 +12,7 @@ public class DestroyOffscreen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_gameManager.IsOffScreen(gameObject))
+        if (_gameManager.Screen.IsOffScreen(gameObject))
         {
             Destroy(gameObject);
         }

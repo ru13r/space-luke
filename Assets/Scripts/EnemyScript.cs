@@ -20,21 +20,19 @@ public class EnemyScript : MonoBehaviour
     private const float KeepDistanceInterval = 0.5f;
     private int _movingDirection;
     
-    private HitScript _hitScript;
     private GameManager _gameManager;
-
-    private int _health;
+    private Ship _ship;
 
     void Start()
     {
         // resolve other components
-        _hitScript = GetComponent<HitScript>();
         _gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        _player = GameObject.Find("Player");  
+        _player = GameObject.Find("Player");
+        _ship = gameObject.GetComponent<Ship>();
+        _ship.SetHealth(100);
         
         // initial state
         _allowFire = false;
-        _health = 100;
 
         // randomize shooting and movement
         _initialDelay = Random.Range(2f, 3f);
@@ -53,7 +51,7 @@ public class EnemyScript : MonoBehaviour
                 StartCoroutine(FireProjectile());
             }
 
-            if (_health <= 0)
+            if (_ship.Health <= 0)
             {
                 var ps = Instantiate(psDestroyed, transform.position, psDestroyed.transform.rotation);
                 Destroy(gameObject);
@@ -83,7 +81,7 @@ public class EnemyScript : MonoBehaviour
             transform.Translate(- Speed * Time.deltaTime * orthogonalDirection);
         }
         // transform.position = _gameManager.MovementClamp(transform.position);
-        if (_gameManager.IsOffScreen(gameObject))
+        if (_gameManager.Screen.IsOffScreen(gameObject))
         {
             _movingDirection = -_movingDirection;
         }
@@ -96,7 +94,8 @@ public class EnemyScript : MonoBehaviour
     private IEnumerator FireProjectile()
     {
         _allowFire = false;
-        Vector3 fireDirection = (_player.transform.position + _gameManager.vPlayerCenterOffset - transform.position).normalized;
+        Vector3 target = _player.GetComponent<Ship>().GetCenter();
+        Vector3 fireDirection = (target - transform.position).normalized;
         GameObject projectile = Instantiate(enemyProjectilePrefab, transform.position + fireDirection * 0.3f, transform.rotation);
         // TODO move to EnemyProjectileScript
         projectile.GetComponent<Rigidbody2D>().velocity = (fireDirection * ProjectileSpeed);
@@ -110,13 +109,11 @@ public class EnemyScript : MonoBehaviour
         {
             // TODO move damage to the projectile class
             _gameManager.AddScore(200);
-            _hitScript.HitAnimation();
-            _health -= 99;
+            _ship.Damage(99);
         }
         if (other.gameObject.CompareTag("Player"))
         {
-            _hitScript.HitAnimation();
-            _health -= 110;
+            _ship.Damage(110);
         }
     }
     

@@ -34,7 +34,7 @@ public class SpawnController : MonoBehaviour
         count = count <= 17 ? count : 17;
         while (n <= count)
         {
-            var newSpawnPoint = _gameManager.GenerateRandomSpawnPoint();
+            var newSpawnPoint = _gameManager.Screen.GenerateRandomSpawnPoint();
             if (list
                 .ConvertAll(spawnPoint => Vector3.Distance(spawnPoint, newSpawnPoint))
                 .All(distance => distance > minDistance)

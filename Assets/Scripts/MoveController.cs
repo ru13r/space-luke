@@ -1,7 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-
 using UnityEngine;
 
 public class Movement : MonoBehaviour
@@ -11,11 +7,11 @@ public class Movement : MonoBehaviour
     // TODO add ship animation dependent on the movement
     public float movementSpeed;
 
-    private GameManager _gameManager;
+    private Screen _screen;
 
     private void Start()
     { 
-        _gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        _screen = GameObject.Find("GameManager").GetComponent<Screen>();
     }
 
     private void Update()
@@ -24,7 +20,7 @@ public class Movement : MonoBehaviour
         var horizontalInput = Input.GetAxis("Horizontal");
         var movementVector = (Vector3.up * verticalInput + Vector3.right * horizontalInput).normalized;
         transform.Translate(movementSpeed * Time.deltaTime * movementVector);
-        transform.position = _gameManager.MovementClamp(transform.position);
+        transform.position = _screen.MovementClamp(transform.position);
     }
 
 

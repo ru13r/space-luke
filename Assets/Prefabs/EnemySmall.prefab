@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -5661793139896406582}
   - component: {fileID: 7866406320389722901}
   - component: {fileID: 5663580690969314838}
-  - component: {fileID: -708440996364384810}
+  - component: {fileID: -3410159358010148767}
   m_Layer: 7
   m_Name: EnemySmall
   m_TagString: Enemy
@@ -174,7 +174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyProjectilePrefab: {fileID: 537805845214284414, guid: 756ae5f95623d4378b2d1de8ac2659ce, type: 3}
   psDestroyed: {fileID: 6491796747355068074, guid: f0d9f7f6d5e16451f9c2dca994a99e4d, type: 3}
---- !u!114 &-708440996364384810
+--- !u!114 &-3410159358010148767
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -183,6 +183,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1471166502505963039}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4efc6f0eff0456e8491588db17506cd, type: 3}
+  m_Script: {fileID: 11500000, guid: eb0cb7aa891c4244a84417210eacd9ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

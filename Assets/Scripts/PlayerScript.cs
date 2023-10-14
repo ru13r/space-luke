@@ -4,25 +4,23 @@ public class PlayerScript : MonoBehaviour
 {
     // TODO make health bar
     // TODO show damage on the ship when health bar is low
+    private Ship _ship;
     
-    private int _health;
     public ParticleSystem psDestroyed;
-
-    private HitScript _hitScript;
 
     private GameManager _gameManager;
     // Start is called before the first frame update
     void Start()
     {
-        _health = 100;
-        _hitScript = GetComponent<HitScript>();
         _gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        _ship = gameObject.GetComponent<Ship>();
+        _ship.SetHealth(100);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (_health <= 0)
+        if (_ship.Health <= 0)
         {
             var ps = Instantiate(psDestroyed, transform.position, psDestroyed.transform.rotation);
             Destroy(gameObject);
@@ -36,15 +34,14 @@ public class PlayerScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("EnemyProjectile"))
         {
-            _hitScript.HitAnimation();
             // TODO move damage to enemy projectile
-            _health -= 34;
+            _ship.Damage(34);
         }
         if (other.gameObject.CompareTag("Enemy"))
         {
-            _hitScript.HitAnimation();
-            _health -= 90;
+            _ship.Damage(Globals.ShipCollisionDamage);
         }
     }
+    
   
 }
