@@ -1,35 +1,41 @@
+using System;
 using UnityEngine;
+using Weapons;
 
-// Ship class is a parent class for all ships
-// Player ship and enemy ships are derived from this class
+[RequireComponent(typeof(Collider2D))]
 public class Ship: MonoBehaviour
 {
+    public WeaponSystem WeaponSystem => weaponSystem;
+    [SerializeField] private GameObject weaponSystemObject;
     // size and position
-    private Collider2D _shipCollider;
+    private Collider2D _collider;
     private Vector3 _size;
-    
-    // hit animation
+    [SerializeField] private WeaponSystem weaponSystem;
     private HitAnimation _hitAnimation;
     
-    
     public int Health { get; private set; }
-
-    void Start()
+    private void Awake()
     {
-        if (gameObject.TryGetComponent(out Collider2D collider))
-        {
-            _shipCollider = collider;
-            _size = _shipCollider.bounds.size;
-        } 
-        else
-        {
-            throw new MissingComponentException($"Failed to find center: {gameObject.name} has no collider attached to it.");
-        }
+        weaponSystem = weaponSystemObject.GetComponent<WeaponSystem>();
         _hitAnimation = gameObject.AddComponent<HitAnimation>();
-        
+        _collider = gameObject.GetComponent<Collider2D>();
+        _size = _collider.bounds.size;
     }
 
-    public Vector3 GetCenter() => _shipCollider.bounds.center;
+
+    public Vector3 GetCenter()
+    {
+        if (_collider)
+        {
+            return _collider.bounds.center;   
+        }
+        else
+        {
+            return Vector3.zero;
+        }
+    }
+
+ 
     public (float, float) GetDimensions() => (_size.x, _size.y);
 
     public void SetHealth(int health) => Health = health;
@@ -39,6 +45,5 @@ public class Ship: MonoBehaviour
         Health -= damage;
         _hitAnimation.Play();
     }
-
     
 }
