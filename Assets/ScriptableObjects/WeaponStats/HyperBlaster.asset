@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: HyperBlaster
   m_EditorClassIdentifier: 
   weaponName: HyperBlaster
-  fireRate: 25
-  projectileSpeed: 20
-  range: 8
+  fireRate: 15
+  projectileSpeed: 15
+  range: 14
   damage: 10
   projectilePrefab: {fileID: 9139025355438451974, guid: dd72cff01ad59451ab8426a57290fa8c, type: 3}
