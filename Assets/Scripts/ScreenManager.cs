@@ -3,8 +3,8 @@ using UnityEngine;
 public class ScreenManager: MonoBehaviour
 {
     // Screen Dimensions
-    private const float ScreenHeight = 16f;
-    private const float ScreenWidth = 10f;
+    public const float ScreenHeight = 16f;
+    public const float ScreenWidth = 10f;
     // player ship object is required to calculate clamps
     private const float ClampX = ScreenWidth / 2;
     private const float ClampY = ScreenHeight / 2;
@@ -31,14 +31,14 @@ public class ScreenManager: MonoBehaviour
         return new Vector3(x, y, position.z);
     }
     
-    public Vector3 GenerateRandomSpawnPoint()
+    public static Vector3 GenerateRandomSpawnPoint()
     {
         var x = Random.Range(-ClampX, ClampX);
-        var y = Random.Range(0, ClampY);
+        var y = Random.Range(ClampY, ClampY + ScreenHeight/2);
         return new Vector3(x, y, -1.0f);
     }
     
-    public bool IsOffScreen(GameObject obj)
+    public static bool IsOffScreen(GameObject obj)
     {
         if (Mathf.Abs(obj.transform.position.x) > ClampX + ClampRadius)
         {

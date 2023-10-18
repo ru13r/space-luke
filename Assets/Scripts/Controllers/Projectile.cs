@@ -43,7 +43,7 @@ namespace Controllers
         // projectile is destroyed if it leaves screen
         private void Update()
         {
-            if (_screenManager.IsOffScreen(gameObject))
+            if (ScreenManager.IsOffScreen(gameObject))
             {
                 Destroy(gameObject);
             }

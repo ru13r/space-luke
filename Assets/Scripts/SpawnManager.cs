@@ -42,7 +42,7 @@ public class SpawnManager : MonoBehaviour
         count = count <= 15 ? count : 15;
         while (n <= count)
         {
-            var newSpawnPoint = _screenManager.GenerateRandomSpawnPoint();
+            var newSpawnPoint = ScreenManager.GenerateRandomSpawnPoint();
             if (list
                 .ConvertAll(spawnPoint => Vector3.Distance(spawnPoint, newSpawnPoint))
                 .All(distance => distance > minDistance)
