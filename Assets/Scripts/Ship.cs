@@ -23,19 +23,7 @@ public class Ship: MonoBehaviour
         _size = _collider.bounds.size;
         _health = maxHealth;
     }
-
-
-    public Vector3 GetCenter()
-    {
-        if (_collider)
-        {
-            return _collider.bounds.center;   
-        }
-        else
-        {
-            return Vector3.zero;
-        }
-    }
+    
 
  
     public (float, float) GetDimensions() => (_size.x, _size.y);

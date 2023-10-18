@@ -8,10 +8,10 @@ namespace WeaponControllers
         [SerializeField] private GameObject weaponObject;
         
         private IWeapon _weapon;
-        private Ship _playerShip; 
+        private GameObject _player; 
         public void Awake()
         {
-            _playerShip = GameObject.Find("Player").GetComponent<Ship>();
+            _player = GameObject.Find("Player");
             _weapon = weaponObject.GetComponent<Weapon>();
         }
         
@@ -21,7 +21,7 @@ namespace WeaponControllers
         }
         public Vector3 GetAttackVector()
         {
-            var targetPosition = _playerShip.GetCenter();
+            var targetPosition = _player.transform.position;
             return (targetPosition - transform.position).normalized;
         }
         public Quaternion GetAttackRotation()
