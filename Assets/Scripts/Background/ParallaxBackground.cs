@@ -15,6 +15,7 @@ namespace Background
 
         private void LateUpdate()
         {
+            if (!_player) return;
             var playerPosition = _player.transform.position;
             transform.position = _position + new Vector3(- playerPosition.x / 10, 0);
         }

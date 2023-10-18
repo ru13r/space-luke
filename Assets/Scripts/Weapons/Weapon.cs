@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using Controllers;
@@ -10,14 +11,23 @@ namespace Weapons
         public WeaponStats stats;
         public GameObject weaponControllerObject;
         private IWeaponController _weaponController;
+        private GameManager _gameManager;
         
         private bool _readyToShoot = true;
         private bool _isArmed = true;
 
         private void Awake()
         {
+            _gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
             _weaponController = weaponControllerObject.GetComponent<IWeaponController>();
+            _isArmed = true;
         }
+
+        private void Update()
+        {
+            if (!_gameManager.isGameActive) _isArmed = false;
+        }
+
         public void Arm() => _isArmed = true;
         public void Disarm() => _isArmed = false;
         public void Shoot()
