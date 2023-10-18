@@ -26,8 +26,6 @@ namespace Controllers
         }
         private void Update()
         {
-            if (_gameManager.isGameActive)
-            {
                 if (_ship.Health <= 0)
                 {
                     _ps = Instantiate(psDestroyed, transform.position, psDestroyed.transform.rotation);
@@ -35,7 +33,6 @@ namespace Controllers
                     _ps.Emit(1);
                     _gameManager.AddScore(1000);
                 }
-            }
         
         }
         private void OnCollisionEnter2D(Collision2D other)

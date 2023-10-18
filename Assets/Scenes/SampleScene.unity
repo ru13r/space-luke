@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 61596351}
   - component: {fileID: 61596350}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LeftController
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -5137,7 +5137,7 @@ GameObject:
   m_Component:
   - component: {fileID: 419708996}
   - component: {fileID: 419708995}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RightController
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -5641,7 +5641,7 @@ GameObject:
   m_Component:
   - component: {fileID: 807403937}
   - component: {fileID: 807403936}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RightWeapon
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -5882,7 +5882,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1245632817}
   - component: {fileID: 1245632816}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WeaponSystem
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -5938,7 +5938,7 @@ GameObject:
   - component: {fileID: 1405184059}
   - component: {fileID: 1405184058}
   - component: {fileID: 1405184057}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -6337,7 +6337,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1761095437}
   - component: {fileID: 1761095436}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LeftWeapon
   m_TagString: Player
   m_Icon: {fileID: 0}
