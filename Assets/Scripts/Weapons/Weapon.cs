@@ -36,7 +36,7 @@ namespace Weapons
                 stats.ProjectilePrefab, 
                 transform.position,
                 attackRotation);
-            var projectileController = projectile.GetComponent<ProjectileController>();
+            var projectileController = projectile.GetComponent<Projectile>();
             projectileController.Initialize(gameObject.tag, stats, attackVector);
             yield return new WaitForSeconds(1 / stats.FireRate);
             _readyToShoot = true;

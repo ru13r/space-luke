@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3893839856578857428}
   - component: {fileID: 2890210705876711356}
   m_Layer: 0
-  m_Name: plasmaGunProjectile
+  m_Name: plasmaProjectile
   m_TagString: EnemyProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

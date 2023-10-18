@@ -5,7 +5,7 @@ using Weapons;
 namespace Controllers
 {
     [RequireComponent(typeof(Rigidbody2D))]
-    public class ProjectileController : MonoBehaviour
+    public class Projectile : MonoBehaviour
     {
         private ScreenManager _screenManager;
         private float _lifetime;

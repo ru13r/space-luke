@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Controllers
 {
-    public class MovementController : MonoBehaviour
+    public class PlayerMovement : MonoBehaviour
     {
         // TODO Add acceleration to movement
         // TODO add particle to engines dependent on the movement

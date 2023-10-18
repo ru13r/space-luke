@@ -4,7 +4,7 @@ using Weapons;
 
 namespace Controllers
 {
-    public class PlayerController : MonoBehaviour
+    public class PlayerScript : MonoBehaviour
     {
         [SerializeField] private ParticleSystem psDestroyed;
         
@@ -39,7 +39,7 @@ namespace Controllers
             var obj = other.gameObject;
             if (obj.layer == LayerMask.NameToLayer("EnemyProjectile"))
             {
-                _ship.Damage(obj.GetComponent<ProjectileController>().Damage);
+                _ship.Damage(obj.GetComponent<Projectile>().Damage);
             }
             if (obj.layer == LayerMask.NameToLayer("Enemy"))
             {

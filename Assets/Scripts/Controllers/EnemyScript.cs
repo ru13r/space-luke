@@ -4,7 +4,7 @@ using Random = UnityEngine.Random;
 namespace Controllers
 {
     [RequireComponent(typeof(Ship))]
-    public class EnemyController : MonoBehaviour
+    public class EnemyScript : MonoBehaviour
     {
         [SerializeField] private ParticleSystem psDestroyed;
     
@@ -40,7 +40,7 @@ namespace Controllers
             var projectile = other.gameObject;
             if (obj.layer == LayerMask.NameToLayer("PlayerProjectile"))
             {
-                _ship.Damage(projectile.GetComponent<ProjectileController>().Damage);
+                _ship.Damage(projectile.GetComponent<Projectile>().Damage);
                 _gameManager.AddScore(200);
             }
             if (obj.layer == LayerMask.NameToLayer("Player"))

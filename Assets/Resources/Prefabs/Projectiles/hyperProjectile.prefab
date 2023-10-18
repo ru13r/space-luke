@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 391926021787415211}
   - component: {fileID: 6045091013123617412}
   m_Layer: 0
-  m_Name: hyperBlasterProjectile
+  m_Name: hyperProjectile
   m_TagString: PlayerProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
