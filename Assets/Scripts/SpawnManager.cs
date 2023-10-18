@@ -22,7 +22,7 @@ public class SpawnManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameObject.FindGameObjectsWithTag("Enemy").Length <= 0)
+        if (GameObject.FindGameObjectsWithTag("Enemy").Length <= 0 && _gameManager.isGameActive)
         {
             SpawnWave(_gameManager.WaveCounter);
         }
