@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7866406320389722901}
   - component: {fileID: 5663580690969314838}
   - component: {fileID: -3410159358010148767}
+  - component: {fileID: -3788910558323782640}
   m_Layer: 7
   m_Name: Mosquito
   m_TagString: Enemy
@@ -188,6 +189,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponSystemObject: {fileID: 1628504681925741117}
   weaponSystem: {fileID: 4686777668004850507}
+--- !u!114 &-3788910558323782640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471166502505963039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd4c91687cb94df4b89831d143366723, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1.5
+  keepDistanceToPlayer: 4
+  keepDistanceInterval: 0.5
 --- !u!1 &1628504681925741117
 GameObject:
   m_ObjectHideFlags: 0
