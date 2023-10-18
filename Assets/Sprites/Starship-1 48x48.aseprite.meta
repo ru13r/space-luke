@@ -121,7 +121,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Starship-1 48x48
     originalName: 
-    pivot: {x: 0.5294118, y: -0.095238104}
+    pivot: {x: 0.50000006, y: -0.095238104}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -151,7 +151,7 @@ ScriptedImporter:
     - name: Starship-1 48x48
       frameIndex: 0
       cellRect:
-        x: 6
+        x: 7
         y: 4
         width: 34
         height: 42

@@ -199,7 +199,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 095acc9ed961e43b891f331288ef81bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 1471166502505963039, guid: fe8bca97f0475449a984a345a1afb400, type: 3}
+  enemyPrefabs:
+  - {fileID: 1471166502505963039, guid: 0f5d3716896fa4ff896894d1c0f7b132, type: 3}
+  - {fileID: 1471166502505963039, guid: fe8bca97f0475449a984a345a1afb400, type: 3}
 --- !u!4 &159623411
 Transform:
   m_ObjectHideFlags: 0
@@ -5959,6 +5961,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponSystemObject: {fileID: 1245632815}
   weaponSystem: {fileID: 1245632816}
+  maxHealth: 100
 --- !u!114 &1405184058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6020,7 +6023,7 @@ BoxCollider2D:
   m_Offset: {x: -0.03125, y: 0.78125}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5294118, y: -0.095238104}
+    pivot: {x: 0.50000006, y: -0.095238104}
     oldSize: {x: 1.0625, y: 1.3125}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5

@@ -19,14 +19,13 @@ namespace Controllers
         
             // ship
             _ship = gameObject.GetComponent<Ship>();
-            _ship.SetHealth(100);
             _ship.WeaponSystem.Arm();
         }
 
         // Update is called once per frame
         private void Update()
         {
-            if (_ship.Health <= 0)
+            if (_ship.GetHealth() <= 0)
             {
                 var ps = Instantiate(psDestroyed, transform.position, psDestroyed.transform.rotation);
                 Destroy(gameObject);

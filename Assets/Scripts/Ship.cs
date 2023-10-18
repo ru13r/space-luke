@@ -13,13 +13,15 @@ public class Ship: MonoBehaviour
     [SerializeField] private WeaponSystem weaponSystem;
     private HitAnimation _hitAnimation;
     
-    public int Health { get; private set; }
+    [SerializeField] private int maxHealth;
+    private int _health;
     private void Awake()
     {
         weaponSystem = weaponSystemObject.GetComponent<WeaponSystem>();
         _hitAnimation = gameObject.AddComponent<HitAnimation>();
         _collider = gameObject.GetComponent<Collider2D>();
         _size = _collider.bounds.size;
+        _health = maxHealth;
     }
 
 
@@ -38,12 +40,12 @@ public class Ship: MonoBehaviour
  
     public (float, float) GetDimensions() => (_size.x, _size.y);
 
-    public void SetHealth(int health) => Health = health;
-
     public void Damage(int damage)
     {
-        Health -= damage;
+        _health -= damage;
         _hitAnimation.Play();
     }
-    
+
+    public int GetHealth() => _health;
+
 }

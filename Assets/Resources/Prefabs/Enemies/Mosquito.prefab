@@ -32,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2, y: 1, z: -1}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1519167333956191777}
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2479761950341296248, guid: affefa9e61a834e17be909dd89ff8803, type: 3}
+  m_Sprite: {fileID: 8582682307616564665, guid: affefa9e61a834e17be909dd89ff8803, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -189,6 +189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponSystemObject: {fileID: 1628504681925741117}
   weaponSystem: {fileID: 4686777668004850507}
+  maxHealth: 20
 --- !u!114 &-3788910558323782640
 MonoBehaviour:
   m_ObjectHideFlags: 0

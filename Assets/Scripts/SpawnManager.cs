@@ -1,10 +1,12 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class SpawnManager : MonoBehaviour
 {
-    public GameObject enemyPrefab;
+    public List<GameObject> enemyPrefabs;
     private GameObject _player;
     private GameManager _gameManager;
     private ScreenManager _screenManager;
@@ -28,12 +30,16 @@ public class SpawnManager : MonoBehaviour
     }
     private void SpawnWave(int count)
     {
+        if (enemyPrefabs.Count == 0)
+        {
+            throw new Exception("Prefabs list in spawn manager is empty!");
+        }
         // TODO move up to settings
-        var minDistance = 2.0f;
+        var minDistance = 1.5f;
         var list = new List<Vector3>();
         var n = 1;
         // TODO not enough room to spawn more than 17 enemies
-        count = count <= 17 ? count : 17;
+        count = count <= 15 ? count : 15;
         while (n <= count)
         {
             var newSpawnPoint = _screenManager.GenerateRandomSpawnPoint();
@@ -46,7 +52,11 @@ public class SpawnManager : MonoBehaviour
                 n++;
             }            
         }
-        list.ForEach(spawnPoint  => Instantiate(enemyPrefab, spawnPoint, enemyPrefab.transform.rotation ));
+        foreach (var spawnPoint in list)
+        {
+            var prefab = enemyPrefabs[Random.Range(0,enemyPrefabs.Count)];
+            Instantiate(prefab, spawnPoint, prefab.transform.rotation);      
+        }
         _gameManager.WaveCounter++;
 
     }

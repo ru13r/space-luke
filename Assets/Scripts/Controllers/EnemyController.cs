@@ -19,14 +19,13 @@ namespace Controllers
             _gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
             
             _ship = GetComponent<Ship>();
-            _ship.SetHealth(20);
             _ship.WeaponSystem.Disarm();
             
             Invoke(nameof(ArmWeapons), Random.Range(1f, 3f));
         }
         private void Update()
         {
-                if (_ship.Health <= 0)
+                if (_ship.GetHealth() <= 0)
                 {
                     _ps = Instantiate(psDestroyed, transform.position, psDestroyed.transform.rotation);
                     Destroy(gameObject);
