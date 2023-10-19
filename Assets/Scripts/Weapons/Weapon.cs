@@ -1,15 +1,18 @@
-using System;
 using System.Collections;
 using UnityEngine;
 using Controllers;
+using UnityEngine.UIElements;
 using WeaponControllers;
 
 namespace Weapons
 {
     public class Weapon : MonoBehaviour, IWeapon
     {
-        public WeaponStats stats;
+        // weapon stats
+        [SerializeField] private WeaponStats stats;
         public GameObject weaponControllerObject;
+        
+        
         private IWeaponController _weaponController;
         private GameManager _gameManager;
         
@@ -41,13 +44,15 @@ namespace Weapons
         {
             _readyToShoot = false;
             var attackVector = _weaponController.GetAttackVector();
-            var attackRotation = _weaponController.GetAttackRotation();
+            var spread = stats.SpreadAngle / 2;
+            var spreadRotation = Quaternion.Euler(new Vector3(0f, 0f, Random.Range(-spread, spread)));
+            var attackRotation = spreadRotation * _weaponController.GetAttackRotation();
             var projectile = Instantiate(
                 stats.ProjectilePrefab, 
                 transform.position,
                 attackRotation);
             var projectileController = projectile.GetComponent<Projectile>();
-            projectileController.Initialize(gameObject.tag, stats.Range, attackVector);
+            projectileController.Initialize(gameObject.tag, stats.Range, spreadRotation * attackVector);
             yield return new WaitForSeconds(1 / stats.FireRate);
             _readyToShoot = true;
         }

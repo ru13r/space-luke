@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: PlasmaGunWeak
   fireRate: 3
-  projectileSpeed: 10
   range: 12
-  damage: 10
+  spreadAngle: 2
   projectilePrefab: {fileID: 9139025355438451974, guid: dd72cff01ad59451ab8426a57290fa8c, type: 3}

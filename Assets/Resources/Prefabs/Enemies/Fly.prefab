@@ -297,6 +297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats: {fileID: 11400000, guid: 48d318b5dd29f434eb7e12d9b82b430e, type: 2}
+  spreadAngle: 5
   weaponControllerObject: {fileID: 7545181282212255923}
 --- !u!1 &7545181282212255923
 GameObject:
