@@ -12,9 +12,9 @@ namespace Background
         private void LateUpdate()
         {
             transform.position += Vector3.down * (Time.deltaTime * Speed);
-            if (transform.position.y <= - BackgroundHeight - ScreenManager.ScreenHeight / 2 )
+            if (transform.position.y <= - BackgroundHeight - GameScreen.ScreenHeight / 2 )
             {
-                transform.position = new Vector3(0,  BackgroundHeight - ScreenManager.ScreenHeight / 2, 0 );
+                transform.position = new Vector3(0,  BackgroundHeight - GameScreen.ScreenHeight / 2, 0 );
             }
         }
     }

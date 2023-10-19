@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 using Weapons;
 
 namespace Controllers
@@ -7,7 +8,6 @@ namespace Controllers
     [RequireComponent(typeof(Rigidbody2D))]
     public class Projectile : MonoBehaviour
     {
-        private ScreenManager _screenManager;
         private float _lifetime;
         private Rigidbody2D _rb;
 
@@ -34,16 +34,14 @@ namespace Controllers
     
         private void Start()
         {
-            _screenManager = GameObject.Find("ScreenManager").GetComponent<ScreenManager>();
             _rb = GetComponent<Rigidbody2D>();
-        
             StartCoroutine(nameof(FiniteLife));
         }
 
         // projectile is destroyed if it leaves screen
         private void Update()
         {
-            if (ScreenManager.IsOffScreen(gameObject))
+            if (GameScreen.IsOffScreen(transform.position, new Vector3(0.1f, 0.1f, 0.0f)))
             {
                 Destroy(gameObject);
             }

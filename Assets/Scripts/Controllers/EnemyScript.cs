@@ -17,7 +17,6 @@ namespace Controllers
         private void Awake()
         {
             _gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-            
             _ship = GetComponent<Ship>();
             _ship.WeaponSystem.Disarm();
             

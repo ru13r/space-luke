@@ -149,10 +149,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0031958818, y: 0.5109525}
+  m_Offset: {x: 0.0031958818, y: 0.010310233}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: -0.06666667}
+    pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1, y: 0.9375}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -160,7 +160,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0029309, y: 0.973083}
+  m_Size: {x: 1.0029309, y: 0.9875945}
   m_EdgeRadius: 0
 --- !u!114 &5663580690969314838
 MonoBehaviour:
@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fe076a162714aa7bb95e24dd801e758, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 1
   direction: {x: 0, y: -1, z: 0}
 --- !u!114 &-3410159358010148767
 MonoBehaviour:
@@ -203,7 +203,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponSystemObject: {fileID: 1628504681925741117}
   weaponSystem: {fileID: 4686777668004850507}
-  maxHealth: 100
+  maxHealth: 80
 --- !u!1 &1628504681925741117
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,14 +9,12 @@ public class SpawnManager : MonoBehaviour
     public List<GameObject> enemyPrefabs;
     private GameObject _player;
     private GameManager _gameManager;
-    private ScreenManager _screenManager;
     
     // Start is called before the first frame update
     void Start()
     {
         _player = GameObject.Find("Player");
         _gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        _screenManager = GameObject.Find("GameManager").GetComponent<ScreenManager>();
     }
 
     // Update is called once per frame
@@ -42,7 +40,7 @@ public class SpawnManager : MonoBehaviour
         count = count <= 15 ? count : 15;
         while (n <= count)
         {
-            var newSpawnPoint = ScreenManager.GenerateRandomSpawnPoint();
+            var newSpawnPoint = GameScreen.GenerateRandomSpawnPoint(new Vector3(-0.5f, 0f, 0f));
             if (list
                 .ConvertAll(spawnPoint => Vector3.Distance(spawnPoint, newSpawnPoint))
                 .All(distance => distance > minDistance)

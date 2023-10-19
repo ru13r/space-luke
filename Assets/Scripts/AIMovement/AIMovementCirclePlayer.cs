@@ -9,18 +9,16 @@ namespace AIMovement
         [SerializeField] private float keepDistanceToPlayer = 4.0f;
         [SerializeField] private float keepDistanceInterval = 0.5f;
         
-        private ScreenManager _screenManager;
         private GameManager _gameManager;
         private GameObject _player;
         private int _movingDirection;
-        private (float, float) _dimensions;
+        private Vector3 _extents;
         
         private void Awake()
         {
             _gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-            _screenManager = GameObject.Find("ScreenManager").GetComponent<ScreenManager>();
             _player = GameObject.Find("Player");
-            _dimensions = GetComponent<Ship>().GetDimensions();
+            _extents = gameObject.GetComponent<Collider2D>().bounds.extents;
             _movingDirection = Random.value > .5f ? 1 : -1;
         }
 
@@ -44,7 +42,7 @@ namespace AIMovement
                 var orthogonalDirection = Vector3.Cross(moveDirection, Vector3.forward) * _movingDirection;
                 transform.Translate(- speed * Time.deltaTime * orthogonalDirection);
             }
-            if (_screenManager.MovementClamp(transform.position, _dimensions) != transform.position)
+            if (GameScreen.IsOffScreen(transform.position, -_extents))
             {
                 _movingDirection = -_movingDirection;
             }
