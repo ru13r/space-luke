@@ -14,7 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: PlasmaGun
   fireRate: 4
-  projectileSpeed: 12
-  range: 16
-  damage: 34
+  range: 10
   projectilePrefab: {fileID: 537805845214284414, guid: 756ae5f95623d4378b2d1de8ac2659ce, type: 3}
