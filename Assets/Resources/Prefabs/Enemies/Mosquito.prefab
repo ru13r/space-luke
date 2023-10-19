@@ -187,9 +187,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb0cb7aa891c4244a84417210eacd9ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shipStats: {fileID: 11400000, guid: 1e869ab5f883e44ceae84bcdec9332ee, type: 2}
   weaponSystemObject: {fileID: 1628504681925741117}
   weaponSystem: {fileID: 4686777668004850507}
-  maxHealth: 20
 --- !u!114 &-3788910558323782640
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,3 +1,4 @@
+using Enemies;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -10,7 +11,6 @@ namespace Controllers
     
         // destruction
         private ParticleSystem _ps;
-    
         private GameManager _gameManager;
         private Ship _ship;
 
@@ -19,17 +19,16 @@ namespace Controllers
             _gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
             _ship = GetComponent<Ship>();
             _ship.WeaponSystem.Disarm();
-            
             Invoke(nameof(ArmWeapons), Random.Range(1f, 3f));
         }
         private void Update()
         {
                 if (_ship.GetHealth() <= 0)
                 {
+                    _gameManager.AddScore(_ship.GetScore());
                     _ps = Instantiate(psDestroyed, transform.position, psDestroyed.transform.rotation);
                     Destroy(gameObject);
                     _ps.Emit(1);
-                    _gameManager.AddScore(1000);
                 }
         
         }
@@ -40,7 +39,7 @@ namespace Controllers
             if (obj.layer == LayerMask.NameToLayer("PlayerProjectile"))
             {
                 _ship.Damage(projectile.GetComponent<Projectile>().Damage);
-                _gameManager.AddScore(200);
+                _gameManager.AddScore(Globals.HitScore);
             }
             if (obj.layer == LayerMask.NameToLayer("Player"))
             {

@@ -5908,9 +5908,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb0cb7aa891c4244a84417210eacd9ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shipStats: {fileID: 11400000, guid: 261565bf1fc384e919684eb3bda6e21a, type: 2}
   weaponSystemObject: {fileID: 1245632815}
   weaponSystem: {fileID: 1245632816}
-  maxHealth: 100
 --- !u!114 &1405184058
 MonoBehaviour:
   m_ObjectHideFlags: 0
