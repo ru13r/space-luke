@@ -1,7 +1,6 @@
 using UnityEngine;
-using UnityEngine.Serialization;
 
-namespace Enemies
+namespace Ships
 {
     [CreateAssetMenu(fileName = "NewShipStats", menuName = "My Objects/Ship Stats", order = 0)]
     public class ShipStats : ScriptableObject

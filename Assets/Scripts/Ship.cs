@@ -1,5 +1,5 @@
 using System;
-using Enemies;
+using Ships;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Weapons;
