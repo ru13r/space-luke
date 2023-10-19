@@ -1,5 +1,7 @@
 using System.Collections;
+using Projectiles;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 using Weapons;
 
@@ -8,6 +10,8 @@ namespace Controllers
     [RequireComponent(typeof(Rigidbody2D))]
     public class Projectile : MonoBehaviour
     {
+        [SerializeField] private ProjectileStats stats;
+        
         private float _lifetime;
         private Rigidbody2D _rb;
 
@@ -16,12 +20,11 @@ namespace Controllers
 
         public int Damage { get; private set; }
 
-        public void Initialize(string projectileTag, WeaponStats stats, Vector3 direction)
+        public void Initialize(string projectileTag, float range, Vector3 direction)
         {
             // set speed, and lifetime
             _direction = direction;
-            _speed = stats.ProjectileSpeed;
-            _lifetime = stats.Range / _speed;
+            _lifetime = range / stats.Speed;
             Damage = stats.Damage;
         
             // set projectile layers
@@ -49,7 +52,7 @@ namespace Controllers
 
         private void FixedUpdate()
         {
-            _rb.transform.position += _direction * (Time.deltaTime * _speed);
+            _rb.transform.position += _direction * (Time.deltaTime * stats.Speed);
         }
 
         // projectile is destroyed on collision with any object except for projectile
