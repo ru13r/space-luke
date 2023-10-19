@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Weapons
 {
-    [CreateAssetMenu(fileName = "New WeaponStats", menuName = "Weapon Stats", order = 51)]
+    [CreateAssetMenu(fileName = "NewWeaponStats", menuName = "My Objects/Weapon Stats", order = 0)]
     public class WeaponStats : ScriptableObject
     {
         [SerializeField] public string weaponName;

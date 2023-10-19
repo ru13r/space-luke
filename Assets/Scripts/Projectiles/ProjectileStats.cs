@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Projectiles
 {
-    [CreateAssetMenu(fileName = "NewProjectile", menuName = "Projectiles/New Projectile", order = 0)]
+    [CreateAssetMenu(fileName = "NewProjectile", menuName = "My Objects/Projectile Stats", order = 0)]
     public class ProjectileStats : ScriptableObject
     {
         [SerializeField] private string projectileName;
