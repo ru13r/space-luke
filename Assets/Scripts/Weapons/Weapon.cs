@@ -11,11 +11,11 @@ namespace Weapons
         // weapon stats
         [SerializeField] private WeaponStats stats;
         public GameObject weaponControllerObject;
-        
-        
+
+
         private IWeaponController _weaponController;
         private GameManager _gameManager;
-        
+
         private bool _readyToShoot = true;
         private bool _isArmed = true;
 
@@ -33,16 +33,32 @@ namespace Weapons
 
         public void Arm() => _isArmed = true;
         public void Disarm() => _isArmed = false;
+
         public void Shoot()
         {
-            if (_readyToShoot && _isArmed)
+            if (_isArmed && _readyToShoot)
             {
-                StartCoroutine(nameof(ShootRoutine));
+                StartCoroutine(nameof(BurstRoutine));
             }
         }
-        private IEnumerator ShootRoutine()
+
+        public bool Ready() => _readyToShoot;
+
+        private IEnumerator BurstRoutine()
         {
             _readyToShoot = false;
+            for (var i = 0; i < stats.Burst; i++)
+            {
+                SingleShot();
+                yield return new WaitForSeconds(1 / stats.FireRate);
+                
+            }
+            yield return new WaitForSeconds(stats.BurstReload);
+            _readyToShoot = true;
+        }
+        
+        private void SingleShot()
+        {
             var attackVector = _weaponController.GetAttackVector();
             var spread = stats.SpreadAngle / 2;
             var spreadRotation = Quaternion.Euler(new Vector3(0f, 0f, Random.Range(-spread, spread)));
@@ -53,8 +69,6 @@ namespace Weapons
                 attackRotation);
             var projectileController = projectile.GetComponent<Projectile>();
             projectileController.Initialize(gameObject.tag, stats.Range, spreadRotation * attackVector);
-            yield return new WaitForSeconds(1 / stats.FireRate);
-            _readyToShoot = true;
         }
     }
 }

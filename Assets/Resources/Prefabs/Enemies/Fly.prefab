@@ -296,8 +296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2db95a020ef5439a9058497554a626a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats: {fileID: 11400000, guid: 48d318b5dd29f434eb7e12d9b82b430e, type: 2}
-  spreadAngle: 5
+  stats: {fileID: 11400000, guid: 366755844fd6349ffafd19e514937ed9, type: 2}
   weaponControllerObject: {fileID: 7545181282212255923}
 --- !u!1 &7545181282212255923
 GameObject:

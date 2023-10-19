@@ -22,8 +22,10 @@ namespace WeaponControllers
             var left = Input.GetKey(KeyCode.Z) ? 1 : 0;;
             var right = Input.GetKey(KeyCode.X) ? 1 : 0;
             if (left == 0 && right == 0) return;
+            if (!_weapon.Ready()) return;
             _attackRotation = Quaternion.Euler(0f, 0f, (left-right) * (left * leftAngle + right * rightAngle));
             _weapon.Shoot();
+
         }
 
         public Vector3 GetAttackVector()

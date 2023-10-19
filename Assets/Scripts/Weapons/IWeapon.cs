@@ -5,5 +5,7 @@ namespace Weapons
         public void Shoot();
         public void Arm();
         public void Disarm();
+
+        public bool Ready();
     }
 }
