@@ -8,7 +8,7 @@ namespace WeaponControllers
         
         private void Update()
         {
-            Weapon.SetProjectileDirectionAndRotation(direction, transform.rotation);
+            Weapon.SetProjectileDirectionAndRotation(direction, Quaternion.FromToRotation(Vector3.up, direction));
             Weapon.Attack();
         }
     }
