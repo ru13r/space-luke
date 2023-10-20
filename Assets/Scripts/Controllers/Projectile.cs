@@ -1,9 +1,8 @@
 using System.Collections;
-using Projectiles;
 using UnityEngine;
-using UnityEngine.Serialization;
-using UnityEngine.UI;
-using Weapons;
+
+using Projectiles;
+
 
 namespace Controllers
 {

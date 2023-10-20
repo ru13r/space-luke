@@ -1,7 +1,6 @@
 using System;
-using Ships;
 using UnityEngine;
-using UnityEngine.Serialization;
+using Ships;
 using Weapons;
 
 public class Ship: MonoBehaviour

@@ -1,13 +1,13 @@
 using UnityEngine;
-using TMPro;
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
+
+using TMPro;
 
 public class GameManager: MonoBehaviour
 {
     // UI
-    [FormerlySerializedAs("ScoreText")] public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI scoreText;
     public TextMeshProUGUI GameOverText;
     public Button RestartButton;
     
