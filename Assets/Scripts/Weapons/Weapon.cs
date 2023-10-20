@@ -7,17 +7,16 @@ namespace Weapons
     public class Weapon : MonoBehaviour, IWeapon
     {
         // weapon stats
-        [SerializeField] private WeaponStats stats;
+        [SerializeField] protected WeaponStats stats;
         public bool IsArmed { get; set; }
-        
         private GameManager _gameManager;
 
         // state
-        private bool _readyToShoot = true;
+        protected bool ReadyToShoot = true;
         
         // projectile parameters
-        Vector3 _projectileDirection = Vector3.zero;
-        private Quaternion _projectileRotation = Quaternion.identity;
+        protected Vector3 ProjectileDirection = Vector3.zero;
+        protected Quaternion ProjectileRotation = Quaternion.identity;
         
         // unity lifecycle
         private void Awake()
@@ -33,23 +32,23 @@ namespace Weapons
 
         public void SetProjectileDirectionAndRotation(Vector3 direction, Quaternion rotation)
         {
-            _projectileDirection = direction.normalized;
-            _projectileRotation = rotation;
+            ProjectileDirection = direction.normalized;
+            ProjectileRotation = rotation;
         }
 
         public void Attack()
         {
-            if (IsArmed && _readyToShoot)
+            if (IsArmed && ReadyToShoot)
             {
                 StartCoroutine(nameof(BurstRoutine));
             }
         }
 
-        public bool IsReady() => _readyToShoot;
+        public bool IsReady() => ReadyToShoot;
 
-        private IEnumerator BurstRoutine()
+        protected virtual IEnumerator BurstRoutine()
         {
-            _readyToShoot = false;
+            ReadyToShoot = false;
             for (var i = 0; i < stats.Burst; i++)
             {
                 SingleAttack();
@@ -57,20 +56,19 @@ namespace Weapons
                 
             }
             yield return new WaitForSeconds(stats.BurstReload);
-            _readyToShoot = true;
+            ReadyToShoot = true;
         }
         
-        private void SingleAttack()
+        protected virtual void SingleAttack()
         {
             var spread = stats.SpreadAngle / 2;
             var spreadRotation = Quaternion.Euler(new Vector3(0f, 0f, Random.Range(-spread, spread)));
-            
             var projectile = Instantiate(
                 stats.ProjectilePrefab, 
                 transform.position,
-                _projectileRotation);
+                ProjectileRotation);
             var projectileController = projectile.GetComponent<Projectile>();
-            projectileController.Initialize(gameObject.tag, stats.Range, spreadRotation * _projectileDirection);
+            projectileController.Initialize(gameObject.tag, stats.Range, spreadRotation * ProjectileDirection);
         }
     }
 }

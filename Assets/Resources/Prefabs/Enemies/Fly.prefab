@@ -203,7 +203,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shipStats: {fileID: 11400000, guid: bfbe1cc95014f4caa9e800ccace4f644, type: 2}
   weaponSystemObject: {fileID: 1628504681925741117}
-  weaponSystem: {fileID: 4686777668004850507}
 --- !u!1 &1628504681925741117
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,8 +249,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06b32ac9f36e4288996ff34cc32f4fae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapons:
-  - {fileID: 3762674033665908381}
 --- !u!114 &6557605134597761700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,8 +261,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c07b7d1c3a744fd483b26938681ee089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  direction: {x: 0, y: -1, z: 0}
   weaponObject: {fileID: 7047716502405537336}
+  direction: {x: 0, y: -1, z: 0}
 --- !u!1 &7047716502405537336
 GameObject:
   m_ObjectHideFlags: 0
@@ -275,7 +272,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3275253061343771670}
-  - component: {fileID: 3762674033665908381}
+  - component: {fileID: 5631678206559500741}
   m_Layer: 7
   m_Name: Weapon
   m_TagString: Enemy
@@ -298,7 +295,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1519167333956191777}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3762674033665908381
+--- !u!114 &5631678206559500741
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -307,7 +304,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 7047716502405537336}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2db95a020ef5439a9058497554a626a7, type: 3}
+  m_Script: {fileID: 11500000, guid: 1c65dfa1086c4f5ca1c6289856beaf55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   stats: {fileID: 11400000, guid: 366755844fd6349ffafd19e514937ed9, type: 2}
+  spreadAngle: 90
