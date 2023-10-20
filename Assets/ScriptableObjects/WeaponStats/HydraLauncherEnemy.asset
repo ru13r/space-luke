@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 817429e27299f4c79963824a578f56b4, type: 3}
-  m_Name: PlasmaGunWeak
+  m_Name: HydraLauncherEnemy
   m_EditorClassIdentifier: 
-  weaponName: PlasmaGunWeak
-  fireRate: 0.5
-  range: 10
-  spreadAngle: 4
-  burst: 1
-  burstReloadTime: 0
-  projectilePrefab: {fileID: 537805845214284414, guid: 756ae5f95623d4378b2d1de8ac2659ce, type: 3}
+  weaponName: Hydra Missile
+  fireRate: 4
+  range: 20
+  spreadAngle: 0
+  burst: 4
+  burstReloadTime: 3
+  projectilePrefab: {fileID: 5193912748849257710, guid: dc633f1b5eda741a990b331e2fa731f2, type: 3}

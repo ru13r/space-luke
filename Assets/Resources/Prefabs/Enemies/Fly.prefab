@@ -288,7 +288,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4060735050709613034}
-  - component: {fileID: 8879276028107241263}
+  - component: {fileID: 1883447722005748020}
   m_Layer: 7
   m_Name: Hydra
   m_TagString: Untagged
@@ -311,7 +311,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1519167333956191777}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8879276028107241263
+--- !u!114 &1883447722005748020
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -320,12 +320,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5970892388272182637}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41070816ca3d4a368f08e5b80265b8d1, type: 3}
+  m_Script: {fileID: 11500000, guid: 1c65dfa1086c4f5ca1c6289856beaf55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats: {fileID: 11400000, guid: 1cf6207eb79d64e0a92c35d651d6761e, type: 2}
-  spreadAngle: 180
-  projectileCount: 10
+  stats: {fileID: 11400000, guid: d6ec45e2c038843159af9befcca55fb5, type: 2}
+  spreadAngle: 140
 --- !u!1 &7047716502405537336
 GameObject:
   m_ObjectHideFlags: 0
@@ -335,7 +334,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3275253061343771670}
-  - component: {fileID: 5631678206559500741}
+  - component: {fileID: 5235784336850041480}
   m_Layer: 7
   m_Name: Weapon
   m_TagString: Enemy
@@ -358,7 +357,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1519167333956191777}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5631678206559500741
+--- !u!114 &5235784336850041480
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -367,8 +366,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7047716502405537336}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c65dfa1086c4f5ca1c6289856beaf55, type: 3}
+  m_Script: {fileID: 11500000, guid: 2db95a020ef5439a9058497554a626a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats: {fileID: 11400000, guid: 366755844fd6349ffafd19e514937ed9, type: 2}
-  spreadAngle: 90
+  stats: {fileID: 11400000, guid: 48d318b5dd29f434eb7e12d9b82b430e, type: 2}
