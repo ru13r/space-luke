@@ -7,16 +7,14 @@ using Weapons;
 public class Ship: MonoBehaviour
 {
     [SerializeField] private ShipStats shipStats;
-    
-    public WeaponSystem WeaponSystem => weaponSystem;
     [SerializeField] private GameObject weaponSystemObject;
-    [SerializeField] private WeaponSystem weaponSystem;
+    [NonSerialized] public WeaponSystem WeaponSystem;
     private HitAnimation _hitAnimation;
 
     private int _health;
     private void Awake()
     {
-        weaponSystem = weaponSystemObject.GetComponent<WeaponSystem>();
+        WeaponSystem = weaponSystemObject.GetComponent<WeaponSystem>();
         _hitAnimation = gameObject.AddComponent<HitAnimation>();
         _health = shipStats.health;
     }

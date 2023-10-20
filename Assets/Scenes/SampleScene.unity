@@ -169,53 +169,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 438afd9c669d424f930e53cc7235f880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &61596349
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 61596351}
-  - component: {fileID: 61596350}
-  m_Layer: 6
-  m_Name: LeftController
-  m_TagString: Player
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &61596350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 61596349}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1264edb176c0400dba8798507aae25e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weaponObject: {fileID: 1761095435}
-  leftAngle: 45
-  rightAngle: 35
---- !u!4 &61596351
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 61596349}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1245632817}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &159623409
 GameObject:
   m_ObjectHideFlags: 0
@@ -5091,53 +5044,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!1 &419708994
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 419708996}
-  - component: {fileID: 419708995}
-  m_Layer: 6
-  m_Name: RightController
-  m_TagString: Player
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &419708995
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 419708994}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1264edb176c0400dba8798507aae25e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weaponObject: {fileID: 807403935}
-  leftAngle: 35
-  rightAngle: 45
---- !u!4 &419708996
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 419708994}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1245632817}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &431795064
 GameObject:
   m_ObjectHideFlags: 0
@@ -5625,7 +5531,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats: {fileID: 11400000, guid: db6b95ba2f4f64a3ca8010947322434b, type: 2}
-  weaponControllerObject: {fileID: 419708994}
 --- !u!4 &807403937
 Transform:
   m_ObjectHideFlags: 0
@@ -5833,6 +5738,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1245632817}
   - component: {fileID: 1245632816}
+  - component: {fileID: 1245632819}
+  - component: {fileID: 1245632818}
   m_Layer: 6
   m_Name: WeaponSystem
   m_TagString: Player
@@ -5852,9 +5759,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06b32ac9f36e4288996ff34cc32f4fae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapons:
-  - {fileID: 1761095436}
-  - {fileID: 807403936}
 --- !u!4 &1245632817
 Transform:
   m_ObjectHideFlags: 0
@@ -5870,10 +5774,38 @@ Transform:
   m_Children:
   - {fileID: 1761095437}
   - {fileID: 807403937}
-  - {fileID: 61596351}
-  - {fileID: 419708996}
   m_Father: {fileID: 1405184063}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1245632818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245632815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1264edb176c0400dba8798507aae25e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponObject: {fileID: 807403935}
+  leftAngle: 35
+  rightAngle: 45
+--- !u!114 &1245632819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245632815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1264edb176c0400dba8798507aae25e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponObject: {fileID: 1761095435}
+  leftAngle: 45
+  rightAngle: 35
 --- !u!1 &1405184056
 GameObject:
   m_ObjectHideFlags: 0
@@ -5910,7 +5842,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shipStats: {fileID: 11400000, guid: 261565bf1fc384e919684eb3bda6e21a, type: 2}
   weaponSystemObject: {fileID: 1245632815}
-  weaponSystem: {fileID: 1245632816}
 --- !u!114 &1405184058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6309,7 +6240,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats: {fileID: 11400000, guid: db6b95ba2f4f64a3ca8010947322434b, type: 2}
-  weaponControllerObject: {fileID: 61596349}
 --- !u!4 &1761095437
 Transform:
   m_ObjectHideFlags: 0

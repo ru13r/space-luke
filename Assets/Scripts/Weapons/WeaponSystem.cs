@@ -1,31 +1,29 @@
-using System.Collections.Generic;
 using UnityEngine;
+using WeaponControllers;
 
 namespace Weapons
 {
     public class WeaponSystem: MonoBehaviour
     {
-        [SerializeField] private List<Weapon> weapons;
-        
+        private WeaponController[] _weaponControllers;
+
+        private void Awake()
+        {
+            _weaponControllers = GetComponents<WeaponController>();
+        }
+
         public void Arm()
         {
-            foreach (var weapon in weapons)
+            foreach (var wc in _weaponControllers)
             {
-                weapon.Arm();
+                wc.Arm();
             }
         }
         public void Disarm()
         {
-            foreach (var weapon in weapons)
+            foreach (var wc in _weaponControllers)
             {
-                weapon.Disarm();
-            }
-        }
-        public void Shoot()
-        {
-            foreach (var weapon in weapons)
-            {
-                weapon.Shoot();
+                wc.Disarm();
             }
         }
     }

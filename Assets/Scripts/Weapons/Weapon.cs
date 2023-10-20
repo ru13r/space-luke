@@ -1,8 +1,6 @@
 using System.Collections;
 using UnityEngine;
 using Controllers;
-using UnityEngine.UIElements;
-using WeaponControllers;
 
 namespace Weapons
 {
@@ -10,46 +8,51 @@ namespace Weapons
     {
         // weapon stats
         [SerializeField] private WeaponStats stats;
-        public GameObject weaponControllerObject;
-
-
-        private IWeaponController _weaponController;
+        public bool IsArmed { get; set; }
+        
         private GameManager _gameManager;
 
+        // state
         private bool _readyToShoot = true;
-        private bool _isArmed = true;
-
+        
+        // projectile parameters
+        Vector3 _projectileDirection = Vector3.zero;
+        private Quaternion _projectileRotation = Quaternion.identity;
+        
+        // unity lifecycle
         private void Awake()
         {
             _gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-            _weaponController = weaponControllerObject.GetComponent<IWeaponController>();
-            _isArmed = true;
+            IsArmed = true;
         }
 
         private void Update()
         {
-            if (!_gameManager.isGameActive) _isArmed = false;
+            if (!_gameManager.isGameActive) IsArmed = false;
         }
 
-        public void Arm() => _isArmed = true;
-        public void Disarm() => _isArmed = false;
-
-        public void Shoot()
+        public void SetProjectileDirectionAndRotation(Vector3 direction, Quaternion rotation)
         {
-            if (_isArmed && _readyToShoot)
+            _projectileDirection = direction.normalized;
+            _projectileRotation = rotation;
+        }
+
+        public void Attack()
+        {
+            if (IsArmed && _readyToShoot)
             {
                 StartCoroutine(nameof(BurstRoutine));
             }
         }
 
-        public bool Ready() => _readyToShoot;
+        public bool IsReady() => _readyToShoot;
 
         private IEnumerator BurstRoutine()
         {
             _readyToShoot = false;
             for (var i = 0; i < stats.Burst; i++)
             {
-                SingleShot();
+                SingleAttack();
                 yield return new WaitForSeconds(1 / stats.FireRate);
                 
             }
@@ -57,18 +60,17 @@ namespace Weapons
             _readyToShoot = true;
         }
         
-        private void SingleShot()
+        private void SingleAttack()
         {
-            var attackVector = _weaponController.GetAttackVector();
             var spread = stats.SpreadAngle / 2;
             var spreadRotation = Quaternion.Euler(new Vector3(0f, 0f, Random.Range(-spread, spread)));
-            var attackRotation = spreadRotation * _weaponController.GetAttackRotation();
+            
             var projectile = Instantiate(
                 stats.ProjectilePrefab, 
                 transform.position,
-                attackRotation);
+                _projectileRotation);
             var projectileController = projectile.GetComponent<Projectile>();
-            projectileController.Initialize(gameObject.tag, stats.Range, spreadRotation * attackVector);
+            projectileController.Initialize(gameObject.tag, stats.Range, spreadRotation * _projectileDirection);
         }
     }
 }

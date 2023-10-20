@@ -1,6 +1,4 @@
-using System.Collections.Generic;
 using UnityEngine;
-using Weapons;
 
 namespace Controllers
 {
@@ -16,9 +14,11 @@ namespace Controllers
         private void Awake()
         {
             _gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        
-            // ship
             _ship = gameObject.GetComponent<Ship>();
+        }
+        
+        private void Start()
+        {
             _ship.WeaponSystem.Arm();
         }
 

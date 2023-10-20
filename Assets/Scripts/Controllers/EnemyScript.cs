@@ -1,5 +1,4 @@
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 namespace Controllers
 {
@@ -17,6 +16,10 @@ namespace Controllers
         {
             _gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
             _ship = GetComponent<Ship>();
+        }
+        
+        private void Start()
+        {
             _ship.WeaponSystem.Disarm();
             Invoke(nameof(ArmWeapons), Random.Range(1f, 3f));
         }
