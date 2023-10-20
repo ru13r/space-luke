@@ -6,12 +6,12 @@ namespace WeaponControllers
     {
         private GameObject _player; 
         
-        public void Start()
+        private void Start()
         {
             _player = GameObject.Find("Player");
         }
         
-        public void Update()
+        private void Update()
         {
             if (!_player) return;
             var direction = (_player.transform.position - transform.position).normalized;

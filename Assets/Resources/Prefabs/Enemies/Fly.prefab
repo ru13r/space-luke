@@ -214,6 +214,7 @@ GameObject:
   - component: {fileID: 1519167333956191777}
   - component: {fileID: 4686777668004850507}
   - component: {fileID: 6557605134597761700}
+  - component: {fileID: 8172188422727576889}
   m_Layer: 7
   m_Name: WeaponSystem
   m_TagString: Enemy
@@ -235,6 +236,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3275253061343771670}
+  - {fileID: 4060735050709613034}
   m_Father: {fileID: 4555740154912670763}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4686777668004850507
@@ -263,6 +265,67 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponObject: {fileID: 7047716502405537336}
   direction: {x: 0, y: -1, z: 0}
+--- !u!114 &8172188422727576889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628504681925741117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c07b7d1c3a744fd483b26938681ee089, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponObject: {fileID: 5970892388272182637}
+  direction: {x: 0, y: -1, z: 0}
+--- !u!1 &5970892388272182637
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4060735050709613034}
+  - component: {fileID: 8879276028107241263}
+  m_Layer: 7
+  m_Name: Hydra
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4060735050709613034
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5970892388272182637}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1519167333956191777}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8879276028107241263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5970892388272182637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41070816ca3d4a368f08e5b80265b8d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stats: {fileID: 11400000, guid: 1cf6207eb79d64e0a92c35d651d6761e, type: 2}
+  spreadAngle: 180
+  projectileCount: 10
 --- !u!1 &7047716502405537336
 GameObject:
   m_ObjectHideFlags: 0

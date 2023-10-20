@@ -19,7 +19,7 @@ namespace Controllers
 
         public int Damage { get; private set; }
 
-        public void Initialize(string projectileTag, float range, Vector3 direction)
+        public void Initialize(string weaponTag, float range, Vector3 direction)
         {
             // set speed, and lifetime
             _direction = direction;
@@ -27,7 +27,8 @@ namespace Controllers
             Damage = stats.Damage;
         
             // set projectile layers
-            gameObject.layer = projectileTag switch
+            
+            gameObject.layer = weaponTag switch
             {
                 "Player" => LayerMask.NameToLayer("PlayerProjectile"),
                 _ =>  LayerMask.NameToLayer("EnemyProjectile")

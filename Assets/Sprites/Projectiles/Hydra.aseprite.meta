@@ -181,15 +181,15 @@ ScriptedImporter:
     uvTransform: {x: 17, y: 4}
   - name: Hydra_Frame_3
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: -0.06666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 17
-      y: 28
+      x: 30
+      y: 4
       width: 5
-      height: 16
+      height: 15
     spriteID: 3ccd4d98c3b534de2a05a8a82820e48f
     spriteBone: []
     spriteOutline: []
@@ -198,7 +198,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 17, y: 28}
+    uvTransform: {x: 30, y: 4}
   - name: Hydra_Frame_4
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -206,8 +206,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 30
-      y: 4
+      x: 17
+      y: 28
       width: 5
       height: 16
     spriteID: b6a870ad0b2c34890bcf9f1d8bfe0170
@@ -218,7 +218,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 30, y: 4}
+    uvTransform: {x: 17, y: 28}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -256,9 +256,9 @@ ScriptedImporter:
       frameIndex: 3
       cellRect:
         x: 0
-        y: 0
+        y: 1
         width: 5
-        height: 16
+        height: 15
       spriteId: 3ccd4d98c3b534de2a05a8a82820e48f
     - name: Hydra_Frame_4
       frameIndex: 4
