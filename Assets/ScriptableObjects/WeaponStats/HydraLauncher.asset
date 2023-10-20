@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: HydraLauncher
   m_EditorClassIdentifier: 
   weaponName: Hydra Missile
-  fireRate: 1
+  fireRate: 0.25
   range: 20
   spreadAngle: 0
   burst: 1
