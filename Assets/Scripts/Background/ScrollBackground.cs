@@ -14,7 +14,7 @@ namespace Background
             transform.position += Vector3.down * (Time.deltaTime * Speed);
             if (transform.position.y <= - BackgroundHeight - GameScreen.ScreenHeight / 2 )
             {
-                transform.position = new Vector3(transform.position.x,  BackgroundHeight - GameScreen.ScreenHeight / 2, 0 );
+                transform.position = new Vector3(transform.position.x,  BackgroundHeight - GameScreen.ScreenHeight / 2, -1);
             }
         }
     }

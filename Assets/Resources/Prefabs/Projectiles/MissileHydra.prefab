@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5267745476347225268}
+  - component: {fileID: -4068156496735611137}
   - component: {fileID: 3983001159165944665}
   - component: {fileID: 1107742312323732952}
   - component: {fileID: -5261909112344228740}
-  - component: {fileID: -4068156496735611137}
   - component: {fileID: 4958892612365495428}
   m_Layer: 0
   m_Name: MissileHydra
@@ -36,6 +36,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-4068156496735611137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5193912748849257710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4b0dbaa5c44499d9ab189067c077faf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stats: {fileID: 11400000, guid: a2ee5db04dbab40048d30fe39e25fc51, type: 2}
 --- !u!212 &3983001159165944665
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -136,19 +149,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-4068156496735611137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5193912748849257710}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4b0dbaa5c44499d9ab189067c077faf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stats: {fileID: 11400000, guid: a2ee5db04dbab40048d30fe39e25fc51, type: 2}
 --- !u!61 &4958892612365495428
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -185,7 +185,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 0.15625, y: 0.5}
+    oldSize: {x: 0.15625, y: 0.4375}
     newSize: {x: 0.15625, y: 0.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

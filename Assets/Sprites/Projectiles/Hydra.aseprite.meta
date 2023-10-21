@@ -95,7 +95,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638334286605767330
+  platformSettingsDirtyTick: 638334868479215260
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,47 +121,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Hydra_Frame_0
     originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 4
-      width: 5
-      height: 16
-    spriteID: c642dd72eff214efa84ee6184a7c87b5
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 4}
-  - name: Hydra_Frame_1
-    originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 28
-      width: 5
-      height: 16
-    spriteID: 6c3a82df6616d4fa4805186e70c4ed2c
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 28}
-  - name: Hydra_Frame_2
-    originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: -0.14285715}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -169,8 +129,8 @@ ScriptedImporter:
       x: 17
       y: 4
       width: 5
-      height: 16
-    spriteID: 3a6153ffe23414fc1aa3b8aee3d35565
+      height: 14
+    spriteID: 47a4b640118514d1cad963d7264c5203
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -179,38 +139,18 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 17, y: 4}
-  - name: Hydra_Frame_3
-    originalName: 
-    pivot: {x: 0.5, y: -0.06666667}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 30
-      y: 4
-      width: 5
-      height: 15
-    spriteID: 3ccd4d98c3b534de2a05a8a82820e48f
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 30, y: 4}
-  - name: Hydra_Frame_4
+  - name: Hydra_Frame_1
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 17
-      y: 28
+      x: 4
+      y: 4
       width: 5
       height: 16
-    spriteID: b6a870ad0b2c34890bcf9f1d8bfe0170
+    spriteID: bb84602dc7c104b8e9e99172007851b6
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -218,7 +158,27 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 17, y: 28}
+    uvTransform: {x: 4, y: 4}
+  - name: Hydra_Frame_2
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 28
+      width: 5
+      height: 16
+    spriteID: 4734c153c7a2b4fe8ac4cc45e8a13257
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 28}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -232,10 +192,10 @@ ScriptedImporter:
       frameIndex: 0
       cellRect:
         x: 0
-        y: 0
+        y: 2
         width: 5
-        height: 16
-      spriteId: c642dd72eff214efa84ee6184a7c87b5
+        height: 14
+      spriteId: 47a4b640118514d1cad963d7264c5203
     - name: Hydra_Frame_1
       frameIndex: 1
       cellRect:
@@ -243,7 +203,7 @@ ScriptedImporter:
         y: 0
         width: 5
         height: 16
-      spriteId: 6c3a82df6616d4fa4805186e70c4ed2c
+      spriteId: bb84602dc7c104b8e9e99172007851b6
     - name: Hydra_Frame_2
       frameIndex: 2
       cellRect:
@@ -251,23 +211,7 @@ ScriptedImporter:
         y: 0
         width: 5
         height: 16
-      spriteId: 3a6153ffe23414fc1aa3b8aee3d35565
-    - name: Hydra_Frame_3
-      frameIndex: 3
-      cellRect:
-        x: 0
-        y: 1
-        width: 5
-        height: 15
-      spriteId: 3ccd4d98c3b534de2a05a8a82820e48f
-    - name: Hydra_Frame_4
-      frameIndex: 4
-      cellRect:
-        x: 0
-        y: 0
-        width: 5
-        height: 16
-      spriteId: b6a870ad0b2c34890bcf9f1d8bfe0170
+      spriteId: 4734c153c7a2b4fe8ac4cc45e8a13257
     linkedCells: []
     parentIndex: -1
   platformSettings:

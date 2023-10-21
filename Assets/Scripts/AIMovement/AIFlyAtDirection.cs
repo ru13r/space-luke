@@ -17,7 +17,7 @@ namespace AIMovement
         {
             if (!_gameManager.isGameActive) return;
             {
-                transform.Translate(speed * Time.deltaTime * direction.normalized);
+                transform.position += speed * Time.deltaTime * direction.normalized;
                 if (transform.position.y <= -10f)
                 {
                     Destroy(gameObject);

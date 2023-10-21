@@ -95,7 +95,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638332432931104840
+  platformSettingsDirtyTick: 638334865372440170
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -119,18 +119,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Fly
+  - name: Fly_Frame_0
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
       width: 32
-      height: 30
-    spriteID: a4c3199919b52441cb993259f0ff86d0
+      height: 32
+    spriteID: 8d510118fbb564b89a65c66b1b382a25
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -139,6 +139,26 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
+  - name: Fly_Frame_1
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 44
+      width: 32
+      height: 32
+    spriteID: d303af290a22b4f98895c92629063856
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 44}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -148,14 +168,22 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: Fly
+    - name: Fly_Frame_0
       frameIndex: 0
       cellRect:
         x: 0
-        y: 2
+        y: 0
         width: 32
-        height: 30
-      spriteId: a4c3199919b52441cb993259f0ff86d0
+        height: 32
+      spriteId: 8d510118fbb564b89a65c66b1b382a25
+    - name: Fly_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      spriteId: d303af290a22b4f98895c92629063856
     linkedCells: []
     parentIndex: -1
   platformSettings:
