@@ -30,16 +30,16 @@ namespace AIMovement
             var moveDirection = (playerPosition - position).normalized;
             if (Vector3.Distance(playerPosition, position) >= keepDistanceToPlayer + keepDistanceInterval)
             {
-                transform.Translate(speed * Time.deltaTime * moveDirection);
+                transform.position += speed * Time.deltaTime * moveDirection;
             }
             if (Vector3.Distance(playerPosition, position) <= keepDistanceToPlayer - keepDistanceInterval)
             {
-                transform.Translate(- speed * Time.deltaTime * moveDirection);
+                transform.position -= speed * Time.deltaTime * moveDirection;
             }
             else
             {
                 var orthogonalDirection = Vector3.Cross(moveDirection, Vector3.forward) * _movingDirection;
-                transform.Translate(- speed * Time.deltaTime * orthogonalDirection);
+                transform.position -=  speed * Time.deltaTime * orthogonalDirection;
             }
             if (GameScreen.IsOffScreen(transform.position, -_extents))
             {

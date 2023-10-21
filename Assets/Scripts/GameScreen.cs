@@ -16,7 +16,7 @@ public static class GameScreen
     {
         var x = Random.Range(Left - margin.x, Right + margin.x);
         var y = Random.Range(Top + margin.y, Top + margin.y + ScreenHeight/2);
-        return new Vector3(x, y, -1.0f);
+        return new Vector3(x, y, 0f);
     }
     
     public static bool IsOffScreen(Vector3 position, Vector3 margin)
