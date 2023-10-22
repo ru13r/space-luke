@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Controllers
 {
-    public class PlayerMovement : MonoBehaviour
+    public class MovementControls : MonoBehaviour
     {
         // TODO add particle to engines dependent on the movement
         // TODO add ship animation dependent on the movement

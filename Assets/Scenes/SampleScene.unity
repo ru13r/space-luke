@@ -5501,53 +5501,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &730287740
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 730287742}
-  - component: {fileID: 730287743}
-  m_Layer: 6
-  m_Name: LeftHydraLauncher
-  m_TagString: Player
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &730287742
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 730287740}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.4, y: 0.45, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1245632817}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &730287743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 730287740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41070816ca3d4a368f08e5b80265b8d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weaponStats: {fileID: 11400000, guid: 1cf6207eb79d64e0a92c35d651d6761e, type: 2}
-  spreadAngle: 10
-  projectileCount: 5
 --- !u!1 &807403935
 GameObject:
   m_ObjectHideFlags: 0
@@ -5788,7 +5741,6 @@ GameObject:
   - component: {fileID: 1245632819}
   - component: {fileID: 1245632818}
   - component: {fileID: 1245632821}
-  - component: {fileID: 1245632820}
   m_Layer: 6
   m_Name: WeaponSystem
   m_TagString: Player
@@ -5823,7 +5775,6 @@ Transform:
   m_Children:
   - {fileID: 1761095437}
   - {fileID: 807403937}
-  - {fileID: 730287742}
   - {fileID: 2022100495}
   m_Father: {fileID: 1405184063}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5861,20 +5812,6 @@ MonoBehaviour:
   rightTrigger: 120
   leftAngle: 45
   rightAngle: 35
---- !u!114 &1245632820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1245632815}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2e55f221e6c4a7088d21e381f1aea95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weaponObject: {fileID: 2022100493}
-  trigger: 115
 --- !u!114 &1245632821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5887,8 +5824,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2e55f221e6c4a7088d21e381f1aea95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponObject: {fileID: 730287740}
-  trigger: 97
+  weaponObject: {fileID: 2022100493}
+  trigger: 99
 --- !u!1 &1405184056
 GameObject:
   m_ObjectHideFlags: 0
@@ -6523,7 +6460,7 @@ GameObject:
   - component: {fileID: 2022100495}
   - component: {fileID: 2022100496}
   m_Layer: 6
-  m_Name: RightHydraLauncher
+  m_Name: SpreadHydraLauncher
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6538,7 +6475,7 @@ Transform:
   m_GameObject: {fileID: 2022100493}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.4, y: 0.45, z: 0}
+  m_LocalPosition: {x: 0.008, y: 0.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

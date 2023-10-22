@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace WeaponControllers
 {
-    public class AIShootAtDirection : WeaponController
+    public class AutoAttackDirection : WeaponController
     {
         [SerializeField] private Vector3 direction = Vector3.down;
         

@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace WeaponControllers
 {
-    public class PlayerLeftRightDirectional : WeaponController
+    public class LeftRightButton : WeaponController
     {
         [SerializeField] private KeyCode leftTrigger;
         [SerializeField] private KeyCode rightTrigger;

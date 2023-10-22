@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace WeaponControllers
 {
-    public class AIShootAtPlayerShip : WeaponController
+    public class AutoAttackPlayer : WeaponController
     {
         private GameObject _player; 
         
