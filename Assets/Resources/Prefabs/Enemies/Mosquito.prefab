@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4555740154912670763}
-  - component: {fileID: 6284587889723726140}
-  - component: {fileID: 5663580690969314838}
   - component: {fileID: -3410159358010148767}
+  - component: {fileID: 5663580690969314838}
   - component: {fileID: 130155137220194770}
   - component: {fileID: -3788910558323782640}
+  - component: {fileID: 6284587889723726140}
   - component: {fileID: 2598214482420202455}
   m_Layer: 7
   m_Name: Mosquito
@@ -38,6 +38,61 @@ Transform:
   - {fileID: 1519167333956191777}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+--- !u!114 &-3410159358010148767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471166502505963039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb0cb7aa891c4244a84417210eacd9ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipStats: {fileID: 11400000, guid: 1e869ab5f883e44ceae84bcdec9332ee, type: 2}
+  weaponSystemObject: {fileID: 1628504681925741117}
+--- !u!114 &5663580690969314838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471166502505963039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dcd223b1eba94105a6d1ac75734f2c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  psDestroyed: {fileID: 6491796747355068074, guid: f0d9f7f6d5e16451f9c2dca994a99e4d, type: 3}
+--- !u!114 &130155137220194770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471166502505963039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a866f6e69c14c85878d2867291d9c31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turnRate: 120
+--- !u!114 &-3788910558323782640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471166502505963039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd4c91687cb94df4b89831d143366723, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1.5
+  keepDistanceToPlayer: 4
+  keepDistanceInterval: 0.5
 --- !u!212 &6284587889723726140
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -90,61 +145,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5663580690969314838
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1471166502505963039}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dcd223b1eba94105a6d1ac75734f2c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  psDestroyed: {fileID: 6491796747355068074, guid: f0d9f7f6d5e16451f9c2dca994a99e4d, type: 3}
---- !u!114 &-3410159358010148767
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1471166502505963039}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb0cb7aa891c4244a84417210eacd9ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shipStats: {fileID: 11400000, guid: 1e869ab5f883e44ceae84bcdec9332ee, type: 2}
-  weaponSystemObject: {fileID: 1628504681925741117}
---- !u!114 &130155137220194770
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1471166502505963039}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a866f6e69c14c85878d2867291d9c31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  turnRate: 120
---- !u!114 &-3788910558323782640
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1471166502505963039}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd4c91687cb94df4b89831d143366723, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1.5
-  keepDistanceToPlayer: 4
-  keepDistanceInterval: 0.5
 --- !u!60 &2598214482420202455
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -270,7 +270,7 @@ GameObject:
   - component: {fileID: 3275253061343771670}
   - component: {fileID: 3762674033665908381}
   m_Layer: 7
-  m_Name: Weapon
+  m_Name: PlasmaGun
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -285,7 +285,7 @@ Transform:
   m_GameObject: {fileID: 7047716502405537336}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.452, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -303,4 +303,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2db95a020ef5439a9058497554a626a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats: {fileID: 11400000, guid: 48d318b5dd29f434eb7e12d9b82b430e, type: 2}
+  weaponStats: {fileID: 11400000, guid: 359dada6305e645ae8854f3f8f55fa43, type: 2}

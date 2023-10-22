@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: HyperBlaster
   fireRate: 15
-  range: 12
   spreadAngle: 2
   burst: 1
   burstReloadTime: 0
-  projectilePrefab: {fileID: 9139025355438451974, guid: dd72cff01ad59451ab8426a57290fa8c, type: 3}
+  projectileStats: {fileID: 11400000, guid: 91f4329a6f09d4070a66f3267dab690b, type: 2}

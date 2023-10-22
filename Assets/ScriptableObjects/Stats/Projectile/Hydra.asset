@@ -10,8 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 97f9979a936046ec96741cc1b82d230d, type: 3}
-  m_Name: HydraMissile
+  m_Name: Hydra
   m_EditorClassIdentifier: 
   projectileName: Hydra Missile
   damage: 80
   speed: 12
+  range: 16
+  projectilePrefab: {fileID: 5193912748849257710, guid: 5212f3741700544cb884c4e3702a14eb, type: 3}

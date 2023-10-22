@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 817429e27299f4c79963824a578f56b4, type: 3}
-  m_Name: HydraLauncher
+  m_Name: HydraLauncherEnemy
   m_EditorClassIdentifier: 
   weaponName: Hydra Missile
-  fireRate: 0.25
-  range: 20
+  fireRate: 4
   spreadAngle: 0
-  burst: 1
-  burstReloadTime: 0
-  projectilePrefab: {fileID: 5193912748849257710, guid: 5212f3741700544cb884c4e3702a14eb, type: 3}
+  burst: 4
+  burstReloadTime: 4
+  projectileStats: {fileID: 11400000, guid: fb0198b4b50a84a3299afc6f1c988142, type: 2}

@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 817429e27299f4c79963824a578f56b4, type: 3}
-  m_Name: PlasmaGun
+  m_Script: {fileID: 11500000, guid: 97f9979a936046ec96741cc1b82d230d, type: 3}
+  m_Name: HydraSlow
   m_EditorClassIdentifier: 
-  weaponName: PlasmaGun
-  fireRate: 4
-  range: 12
-  spreadAngle: 2.5
-  projectilePrefab: {fileID: 537805845214284414, guid: 756ae5f95623d4378b2d1de8ac2659ce, type: 3}
+  projectileName: HydraSlow
+  damage: 80
+  speed: 5
+  range: 16
+  projectilePrefab: {fileID: 5193912748849257710, guid: 5212f3741700544cb884c4e3702a14eb, type: 3}

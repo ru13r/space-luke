@@ -9,13 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4555740154912670763}
-  - component: {fileID: 6284587889723726140}
-  - component: {fileID: -5661793139896406582}
-  - component: {fileID: 3265738665154115151}
+  - component: {fileID: -3410159358010148767}
   - component: {fileID: 5663580690969314838}
   - component: {fileID: 7923819517560518483}
-  - component: {fileID: -3410159358010148767}
+  - component: {fileID: 6284587889723726140}
   - component: {fileID: 780723272715357782}
+  - component: {fileID: 3265738665154115151}
   m_Layer: 7
   m_Name: Fly
   m_TagString: Enemy
@@ -39,6 +38,47 @@ Transform:
   - {fileID: 1519167333956191777}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+--- !u!114 &-3410159358010148767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471166502505963039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb0cb7aa891c4244a84417210eacd9ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipStats: {fileID: 11400000, guid: bfbe1cc95014f4caa9e800ccace4f644, type: 2}
+  weaponSystemObject: {fileID: 1628504681925741117}
+--- !u!114 &5663580690969314838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471166502505963039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dcd223b1eba94105a6d1ac75734f2c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  psDestroyed: {fileID: 6491796747355068074, guid: f0d9f7f6d5e16451f9c2dca994a99e4d, type: 3}
+--- !u!114 &7923819517560518483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471166502505963039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fe076a162714aa7bb95e24dd801e758, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  direction: {x: 0, y: -1, z: 0}
 --- !u!212 &6284587889723726140
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -91,33 +131,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &-5661793139896406582
-Rigidbody2D:
-  serializedVersion: 4
+--- !u!95 &780723272715357782
+Animator:
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1471166502505963039}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 500
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: -8041719731550932243, guid: 45c4a158035874aadbfc561dd14e86a5, type: 3}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!60 &3265738665154115151
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -173,68 +207,6 @@ PolygonCollider2D:
       - {x: -0.3055756, y: 0.59814453}
       - {x: -0.5065594, y: 0.43477887}
   m_UseDelaunayMesh: 0
---- !u!114 &5663580690969314838
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1471166502505963039}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dcd223b1eba94105a6d1ac75734f2c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  psDestroyed: {fileID: 6491796747355068074, guid: f0d9f7f6d5e16451f9c2dca994a99e4d, type: 3}
---- !u!114 &7923819517560518483
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1471166502505963039}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fe076a162714aa7bb95e24dd801e758, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
-  direction: {x: 0, y: -1, z: 0}
---- !u!114 &-3410159358010148767
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1471166502505963039}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb0cb7aa891c4244a84417210eacd9ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shipStats: {fileID: 11400000, guid: bfbe1cc95014f4caa9e800ccace4f644, type: 2}
-  weaponSystemObject: {fileID: 1628504681925741117}
---- !u!95 &780723272715357782
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1471166502505963039}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: -8041719731550932243, guid: 45c4a158035874aadbfc561dd14e86a5, type: 3}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1628504681925741117
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,7 +294,7 @@ GameObject:
   - component: {fileID: 4060735050709613034}
   - component: {fileID: 1883447722005748020}
   m_Layer: 7
-  m_Name: Hydra
+  m_Name: HydraLauncher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -337,7 +309,7 @@ Transform:
   m_GameObject: {fileID: 5970892388272182637}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.786, z: 0}
+  m_LocalPosition: {x: 0, y: 0.309, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -355,7 +327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c65dfa1086c4f5ca1c6289856beaf55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats: {fileID: 11400000, guid: d6ec45e2c038843159af9befcca55fb5, type: 2}
+  weaponStats: {fileID: 11400000, guid: d6ec45e2c038843159af9befcca55fb5, type: 2}
   spreadAngle: 140
 --- !u!1 &7047716502405537336
 GameObject:
@@ -368,7 +340,7 @@ GameObject:
   - component: {fileID: 3275253061343771670}
   - component: {fileID: 5235784336850041480}
   m_Layer: 7
-  m_Name: Weapon
+  m_Name: PlasmaGun
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -383,7 +355,7 @@ Transform:
   m_GameObject: {fileID: 7047716502405537336}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.993, z: 0}
+  m_LocalPosition: {x: 0, y: 0.58, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -401,4 +373,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2db95a020ef5439a9058497554a626a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats: {fileID: 11400000, guid: 48d318b5dd29f434eb7e12d9b82b430e, type: 2}
+  weaponStats: {fileID: 11400000, guid: 359dada6305e645ae8854f3f8f55fa43, type: 2}

@@ -1,3 +1,5 @@
+using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Background
@@ -8,14 +10,13 @@ namespace Background
         private const float BackgroundHeight = 1332.0f / 32;
 
         private GameObject _player;
-    
+
         private void LateUpdate()
         {
             transform.position += Vector3.down * (Time.deltaTime * Speed);
-            if (transform.position.y <= - BackgroundHeight - GameScreen.ScreenHeight / 2 )
-            {
-                transform.position = new Vector3(transform.position.x,  BackgroundHeight - GameScreen.ScreenHeight / 2, -1);
-            }
+            
+            if (!(transform.position.y <= -BackgroundHeight - GameScreen.ScreenHeight / 2)) return;
+            transform.position = new Vector3(transform.position.x,  BackgroundHeight - GameScreen.ScreenHeight / 2, Globals.BackgroundZOrder);
         }
     }
 }

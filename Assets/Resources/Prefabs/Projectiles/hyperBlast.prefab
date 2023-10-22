@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 391926021787415211}
   - component: {fileID: 6045091013123617412}
   m_Layer: 0
-  m_Name: hyperBlast
+  m_Name: Hyperblast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

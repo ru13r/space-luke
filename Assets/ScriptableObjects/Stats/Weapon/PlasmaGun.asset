@@ -9,9 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97f9979a936046ec96741cc1b82d230d, type: 3}
-  m_Name: HyperBlast
+  m_Script: {fileID: 11500000, guid: 817429e27299f4c79963824a578f56b4, type: 3}
+  m_Name: PlasmaGun
   m_EditorClassIdentifier: 
-  projectileName: HyperBlast
-  damage: 10
-  speed: 15
+  weaponName: PlasmaGun
+  fireRate: 0.5
+  spreadAngle: 2.5
+  burst: 1
+  burstReloadTime: 0
+  projectileStats: {fileID: 11400000, guid: beab9ad78118e4046934f31511b2e8d7, type: 2}

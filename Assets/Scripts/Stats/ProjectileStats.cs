@@ -7,10 +7,15 @@ namespace Projectiles
     {
         [SerializeField] private string projectileName;
         [SerializeField] private int damage = 20;
-        [SerializeField] private int speed = 4;
+        [SerializeField] private float speed = 4;
+        [SerializeField] private float range = 4;
+        [SerializeField] private GameObject projectilePrefab;
         
         public string ProjectileName => projectileName;
         public int Damage => damage;
-        public int Speed => speed;
+        public float Speed => speed;
+        public float Range => range;
+        public GameObject ProjectilePrefab => projectilePrefab;
+        
     }
 }

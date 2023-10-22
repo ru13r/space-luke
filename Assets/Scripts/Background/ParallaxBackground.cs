@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Background
@@ -13,11 +14,18 @@ namespace Background
 
         }
 
+        private void Start()
+        {
+            var transform1 = transform;
+            var position = transform1.position;
+            transform1.position = new Vector3(position.x, position.y, Globals.BackgroundZOrder);
+        }
+
         private void LateUpdate()
         {
             if (!_player) return;
             var playerPosition = _player.transform.position;
-            transform.position = _position + new Vector3(- playerPosition.x / 10, 0);
+            transform.position = _position + new Vector3(- playerPosition.x / 10f, 0f, 0f);
         }
     }
 }

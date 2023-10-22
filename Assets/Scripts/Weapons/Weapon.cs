@@ -1,13 +1,13 @@
 using System.Collections;
 using UnityEngine;
-using Controllers;
+using Projectiles;
 
 namespace Weapons
 {
     public class Weapon : MonoBehaviour, IWeapon
     {
-        // weapon stats
-        [SerializeField] protected WeaponStats stats;
+        // weapon and projectile stats
+        [SerializeField] protected WeaponStats weaponStats;
         public bool IsArmed { get; set; }
         private GameManager _gameManager;
 
@@ -49,26 +49,26 @@ namespace Weapons
         protected virtual IEnumerator BurstRoutine()
         {
             ReadyToShoot = false;
-            for (var i = 0; i < stats.Burst; i++)
+            for (var i = 0; i < weaponStats.Burst; i++)
             {
                 SingleAttack();
-                yield return new WaitForSeconds(1 / stats.FireRate);
+                yield return new WaitForSeconds(1 / weaponStats.FireRate);
                 
             }
-            yield return new WaitForSeconds(stats.BurstReload);
+            yield return new WaitForSeconds(weaponStats.BurstReload);
             ReadyToShoot = true;
         }
         
         protected virtual void SingleAttack()
         {
-            var spread = stats.SpreadAngle / 2;
+            var spread = weaponStats.SpreadAngle / 2;
             var spreadRotation = Quaternion.Euler(new Vector3(0f, 0f, Random.Range(-spread, spread)));
             var projectile = Instantiate(
-                stats.ProjectilePrefab, 
+                weaponStats.ProjectileStats.ProjectilePrefab, 
                 transform.position,
                 ProjectileRotation);
-            var projectileController = projectile.GetComponent<Projectile>();
-            projectileController.Initialize(gameObject.tag, stats.Range, spreadRotation * ProjectileDirection);
+            var projectileController = projectile.GetComponent<ProjectileScript>();
+            projectileController.Initialize(gameObject.tag, weaponStats, spreadRotation * ProjectileDirection);
         }
     }
 }

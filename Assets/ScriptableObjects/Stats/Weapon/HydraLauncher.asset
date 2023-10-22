@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 817429e27299f4c79963824a578f56b4, type: 3}
-  m_Name: HyperBlasterCannon
+  m_Name: HydraLauncher
   m_EditorClassIdentifier: 
-  weaponName: HyperBlasterCannon
-  fireRate: 4
-  range: 12
-  spreadAngle: 2
-  burst: 3
-  burstReloadTime: 2
-  projectilePrefab: {fileID: 9139025355438451974, guid: dd72cff01ad59451ab8426a57290fa8c, type: 3}
+  weaponName: Hydra Missile
+  fireRate: 0.25
+  spreadAngle: 0
+  burst: 1
+  burstReloadTime: 0
+  projectileStats: {fileID: 11400000, guid: a2ee5db04dbab40048d30fe39e25fc51, type: 2}

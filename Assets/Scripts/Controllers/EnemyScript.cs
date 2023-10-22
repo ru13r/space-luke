@@ -1,3 +1,4 @@
+using Projectiles;
 using UnityEngine;
 
 namespace Controllers
@@ -40,7 +41,7 @@ namespace Controllers
             var projectile = other.gameObject;
             if (obj.layer == LayerMask.NameToLayer("PlayerProjectile"))
             {
-                _ship.Damage(projectile.GetComponent<Projectile>().Damage);
+                _ship.Damage(projectile.GetComponent<ProjectileScript>().Damage);
                 _gameManager.AddScore(Globals.HitScore);
             }
             if (obj.layer == LayerMask.NameToLayer("Player"))
