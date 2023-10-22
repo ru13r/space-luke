@@ -95,7 +95,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638332433022204180
+  platformSettingsDirtyTick: 638335974567059860
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,15 +121,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Mosquito
     originalName: 
-    pivot: {x: 0.5, y: -0.06666667}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 28
+      y: 4
       width: 16
-      height: 15
+      height: 16
     spriteID: 2bc35565c87fa46c9adbdfe4616a7170
     spriteBone: []
     spriteOutline: []
@@ -138,7 +138,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 28}
+    uvTransform: {x: 4, y: 4}
   - name: Mosquito_Frame_1
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -147,7 +147,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 4
+      y: 28
       width: 16
       height: 16
     spriteID: 7d95669d029494ba1af487e209f50e47
@@ -158,8 +158,48 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 4}
-  spriteSheetImportData: []
+    uvTransform: {x: 4, y: 28}
+  spriteSheetImportData:
+  - name: Mosquito_0
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 27
+      width: 16
+      height: 16
+    spriteID: 41176d7cdea434632b3c1857d457243a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Mosquito_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 16
+      height: 16
+    spriteID: 9d68b234fbc1542a69160a8601e8f78b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
   asepriteLayers:
   - layerIndex: 0
     guid: 479419055
@@ -172,9 +212,9 @@ ScriptedImporter:
       frameIndex: 0
       cellRect:
         x: 0
-        y: 1
+        y: 0
         width: 16
-        height: 15
+        height: 16
       spriteId: 2bc35565c87fa46c9adbdfe4616a7170
     - name: Mosquito_Frame_1
       frameIndex: 1
