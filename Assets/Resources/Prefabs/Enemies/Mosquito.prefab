@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 130155137220194770}
   - component: {fileID: -3788910558323782640}
   - component: {fileID: 6284587889723726140}
+  - component: {fileID: 1282319409810218485}
   - component: {fileID: 2598214482420202455}
   m_Layer: 7
   m_Name: Mosquito
@@ -145,6 +146,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1282319409810218485
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471166502505963039}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 2008919398845393337, guid: affefa9e61a834e17be909dd89ff8803, type: 3}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!60 &2598214482420202455
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -180,7 +202,7 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: -0.23076925}
     oldSize: {x: 0.5, y: 0.40625}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -189,17 +211,19 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.041480303, y: 0.41407067}
-      - {x: -0.15004778, y: 0.2815535}
-      - {x: -0.25782084, y: 0.3228618}
-      - {x: -0.2604277, y: 0.13291943}
-      - {x: -0.072763205, y: -0.005213797}
-      - {x: 0.062368393, y: -0.005213797}
-      - {x: 0.26303458, y: 0.14856082}
-      - {x: 0.25, y: 0.32546872}
-      - {x: 0.15487266, y: 0.2862506}
-      - {x: 0.031118393, y: 0.4166776}
-  m_UseDelaunayMesh: 0
+    - - {x: 0.05190897, y: 0.5070445}
+      - {x: -0.040793657, y: 0.5023202}
+      - {x: -0.0908165, y: 0.3485685}
+      - {x: -0.2604437, y: 0.421754}
+      - {x: -0.25, y: 0.24240929}
+      - {x: -0.07379842, y: 0.13607585}
+      - {x: -0.06756067, y: 0.09652227}
+      - {x: 0.07278228, y: 0.09652215}
+      - {x: 0.08253527, y: 0.13927364}
+      - {x: 0.2526108, y: 0.24502015}
+      - {x: 0.25261092, y: 0.41131043}
+      - {x: 0.09881055, y: 0.35117942}
+  m_UseDelaunayMesh: 1
 --- !u!1 &1628504681925741117
 GameObject:
   m_ObjectHideFlags: 0
