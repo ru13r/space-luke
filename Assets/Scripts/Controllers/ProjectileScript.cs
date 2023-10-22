@@ -1,16 +1,15 @@
 using System.Collections;
+using Projectiles;
 using UnityEngine;
 using Weapons;
 
-namespace Projectiles
+namespace Controllers
 {
-    [RequireComponent(typeof(Rigidbody2D))]
     public class ProjectileScript : MonoBehaviour
     {
         private ProjectileStats _stats;
         
         private float _lifetime;
-        private Rigidbody2D _rb;
 
         private Vector3 _direction;
         private float _speed;
@@ -35,7 +34,6 @@ namespace Projectiles
     
         private void Start()
         {
-            _rb = GetComponent<Rigidbody2D>();
             StartCoroutine(nameof(FiniteLife));
         }
 
@@ -50,7 +48,7 @@ namespace Projectiles
 
         private void FixedUpdate()
         {
-            _rb.transform.position += _direction * (Time.deltaTime * _stats.Speed);
+            transform.position += _direction * (Time.deltaTime * _stats.Speed);
         }
 
         // projectile is destroyed on collision with any object except for projectile
