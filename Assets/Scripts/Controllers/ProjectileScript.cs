@@ -1,5 +1,6 @@
 using System.Collections;
-using Projectiles;
+using Managers;
+using Stats;
 using UnityEngine;
 using Weapons;
 

@@ -12,7 +12,7 @@ namespace WeaponControllers
         
         private void Update()
         {
-            var left = Input.GetKey(leftTrigger) ? 1 : 0;;
+            var left = Input.GetKey(leftTrigger) ? 1 : 0;
             var right = Input.GetKey(rightTrigger) ? 1 : 0;
             if (left == 0 && right == 0) return;
             if (!Weapon.IsReady()) return;

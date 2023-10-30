@@ -1,8 +1,9 @@
+using Managers;
 using UnityEngine;
 
-namespace Controllers
+namespace Movement
 {
-    public class MovementControls : MonoBehaviour
+    public class MovementInput : MonoBehaviour
     {
         // TODO add particle to engines dependent on the movement
         // TODO add ship animation dependent on the movement

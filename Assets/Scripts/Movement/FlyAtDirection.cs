@@ -1,8 +1,9 @@
+using Managers;
 using UnityEngine;
 
 namespace AIMovement
 {
-    public class AIFlyAtDirection : MonoBehaviour
+    public class FlyAtDirection : MonoBehaviour
     {
         [SerializeField] private float speed = 1.5f;
         [SerializeField] private Vector3 direction;
@@ -15,7 +16,7 @@ namespace AIMovement
 
         private void Update()
         {
-            if (!_gameManager.isGameActive) return;
+            if (!_gameManager.IsGameActive) return;
             {
                 transform.position += speed * Time.deltaTime * direction.normalized;
                 if (transform.position.y <= -10f)

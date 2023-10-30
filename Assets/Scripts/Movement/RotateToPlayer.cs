@@ -1,4 +1,5 @@
 using System;
+using Managers;
 using UnityEngine;
 
 namespace AIMovement
@@ -18,7 +19,7 @@ namespace AIMovement
         
         private void Update()
         {
-            if (!_gameManager.isGameActive) return;
+            if (!_gameManager.IsGameActive) return;
             if (!_player) return;
             
             var myTransform = transform;

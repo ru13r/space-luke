@@ -1,7 +1,6 @@
 using System.Collections;
 using Controllers;
 using UnityEngine;
-using Projectiles;
 
 namespace Weapons
 {
@@ -10,7 +9,6 @@ namespace Weapons
         // weapon and projectile stats
         [SerializeField] protected WeaponStats weaponStats;
         public bool IsArmed { get; set; }
-        private GameManager _gameManager;
 
         // state
         protected bool ReadyToShoot = true;
@@ -22,13 +20,7 @@ namespace Weapons
         // unity lifecycle
         private void Awake()
         {
-            _gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
             IsArmed = true;
-        }
-
-        private void Update()
-        {
-            if (!_gameManager.isGameActive) IsArmed = false;
         }
 
         public void SetProjectileDirectionAndRotation(Vector3 direction, Quaternion rotation)

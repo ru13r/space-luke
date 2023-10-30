@@ -1,6 +1,8 @@
 using UnityEngine;
 
-public class HitAnimation: MonoBehaviour
+namespace Ships
+{
+    public class HitAnimation: MonoBehaviour
     {
         private Renderer _renderer;
         private Color _originalColor;
@@ -21,3 +23,4 @@ public class HitAnimation: MonoBehaviour
         }
         
     }
+}

@@ -1,21 +1,20 @@
+using Managers;
 using UnityEngine;
 
 namespace AIMovement
 {
-    public class AIMovementCirclePlayer : MonoBehaviour
+    public class CirclePlayer : MonoBehaviour
     {
         [SerializeField] private float speed = 1.5f;
         [SerializeField] private float keepDistanceToPlayer = 4.0f;
         [SerializeField] private float keepDistanceInterval = 0.5f;
         
-        private GameManager _gameManager;
         private GameObject _player;
         private int _movingDirection;
         private Vector3 _extents;
         
         private void Awake()
         {
-            _gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
             _player = GameObject.Find("Player");
             _extents = gameObject.GetComponent<Collider2D>().bounds.extents;
             _movingDirection = Random.value > .5f ? 1 : -1;
@@ -23,7 +22,7 @@ namespace AIMovement
 
         private void Update()
         {
-            if (!_gameManager.isGameActive) return;
+            if (!_player) return;
             
             var playerPosition = _player.transform.position;
             var position = transform.position;

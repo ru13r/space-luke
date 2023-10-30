@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Projectiles
+namespace Stats
 {
     [CreateAssetMenu(fileName = "NewProjectile", menuName = "My Objects/Projectile Stats", order = 0)]
     public class ProjectileStats : ScriptableObject

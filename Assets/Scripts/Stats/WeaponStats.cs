@@ -1,4 +1,4 @@
-using Projectiles;
+using Stats;
 using UnityEngine;
 using UnityEngine.Serialization;
 
