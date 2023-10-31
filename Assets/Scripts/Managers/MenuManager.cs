@@ -1,6 +1,6 @@
-using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Helpers;
 
 namespace Managers
 {
@@ -41,11 +41,11 @@ namespace Managers
             var nextChoice = _optionChoice;
             if (Input.GetKeyDown(KeyCode.DownArrow))
             {
-                nextChoice = CycleToNextOption(_optionChoice);
+                nextChoice = EnumCycle.CycleToNextOption(_optionChoice);
             }
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
-                nextChoice = CycleToPrevOption(_optionChoice);
+                nextChoice = EnumCycle.CycleToPrevOption(_optionChoice);
             }
 
             if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
@@ -56,21 +56,6 @@ namespace Managers
             if (nextChoice == _optionChoice) return;
             _optionChoice = nextChoice;
             UpdateSelection();
-        }
-        private static TEnum CycleToNextOption<TEnum>(TEnum currentOption) where TEnum : Enum
-        {
-            var enumValues = Enum.GetValues(typeof(TEnum));
-            var currentIndex = Array.IndexOf(enumValues, currentOption);
-            var nextIndex = (currentIndex + 1) % enumValues.Length;
-            return (TEnum)enumValues.GetValue(nextIndex);
-        }
-    
-        private static TEnum CycleToPrevOption<TEnum>(TEnum currentOption) where TEnum : Enum
-        {
-            var enumValues = Enum.GetValues(typeof(TEnum));
-            var currentIndex = Array.IndexOf(enumValues, currentOption);
-            var nextIndex = currentIndex > 0 ? (currentIndex - 1) : enumValues.Length - 1;
-            return (TEnum)enumValues.GetValue(nextIndex);
         }
 
         private void UpdateSelection()
