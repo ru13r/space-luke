@@ -1,7 +1,8 @@
+using Managers;
 using TMPro;
 using UnityEngine;
 
-namespace Managers
+namespace HighScore
 {
     public class HighScoreManager : MonoBehaviour
     {
@@ -28,7 +29,7 @@ namespace Managers
 
         private void AddHighScore(string playerName)
         {
-            HighScore.AddScore(_gm.GetScore(), playerName);
+            global::HighScore.HighScore.AddScore(_gm.GetScore(), playerName);
             _ui.HideHighScore();
             _ui.ShowMenu();
         }

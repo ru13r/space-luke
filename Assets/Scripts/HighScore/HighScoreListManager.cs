@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Managers
+namespace HighScore
 {
     public class HighScoreListManager : MonoBehaviour
     {
@@ -8,8 +8,8 @@ namespace Managers
 
         private void MakeHighScoreList()
         {
-            HighScore.LoadScoresOrCreateNewList();
-            var highScores = HighScore.GetScores();
+            global::HighScore.HighScore.LoadScoresOrCreateNewList();
+            var highScores = global::HighScore.HighScore.GetScores();
             if (highScores.list.Count < 1)
                 // display message that there are no entries
                 return;

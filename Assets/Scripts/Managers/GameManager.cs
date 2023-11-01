@@ -20,7 +20,7 @@ namespace Managers
         private void Awake()
         {
             _ui = GetComponent<UIManager>();
-            HighScore.LoadScoresOrCreateNewList();
+            HighScore.HighScore.LoadScoresOrCreateNewList();
         }
 
         private void Start()
@@ -59,7 +59,7 @@ namespace Managers
         {
             _score += score;
             scoreText.text = "Score: " + _score;
-            if (HighScore.IsNewTopScore(_score) && !_hasSetNewTopScore)
+            if (HighScore.HighScore.IsNewTopScore(_score) && !_hasSetNewTopScore)
             {
                 _hasSetNewTopScore = true;
                 newTopScoreText.gameObject.SetActive(true);
@@ -71,7 +71,7 @@ namespace Managers
         {
             _state = State.GameOver;
             _ui.ShowGameOver();
-            if (HighScore.IsNewHighScore(_score))
+            if (HighScore.HighScore.IsNewHighScore(_score))
                 Invoke(nameof(ShowHighScore), GameOverDelay);
             else
                 Invoke(nameof(ShowMenu), GameOverDelay);
