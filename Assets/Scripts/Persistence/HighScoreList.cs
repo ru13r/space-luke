@@ -42,7 +42,10 @@ namespace Persistence
             }
             else
             {
-                _scores = new ScoreList();
+                _scores = new ScoreList
+                {
+                    list = new List<ScoreEntry>()
+                };
             }
         }
 

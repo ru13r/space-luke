@@ -24,6 +24,7 @@ namespace UI.Screens
 
         private void OnDisable()
         {
+            if (_lines == null || _lines.Count <= 0) return;
             foreach (var line in _lines) Destroy(line);
         }
 
