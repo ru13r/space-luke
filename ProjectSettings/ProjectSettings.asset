@@ -44,8 +44,8 @@ PlayerSettings:
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1920
   defaultScreenHeight: 1080
-  defaultScreenWidthWeb: 320
-  defaultScreenHeightWeb: 512
+  defaultScreenWidthWeb: 640
+  defaultScreenHeightWeb: 1024
   m_StereoRenderingPath: 0
   m_ActiveColorSpace: 1
   m_SpriteBatchVertexThreshold: 300
@@ -280,7 +280,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: -8328923581568760697, guid: ce2b55f91fc1f412ebe51b9b9d71e6a2, type: 3}
+      m_Icon: {fileID: 0}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
@@ -552,7 +552,7 @@ PlayerSettings:
   webGLDebugSymbols: 0
   webGLEmscriptenArgs: 
   webGLModulesDirectory: 
-  webGLTemplate: APPLICATION:Default
+  webGLTemplate: APPLICATION:Minimal
   webGLAnalyzeBuildSize: 0
   webGLUseEmbeddedResources: 0
   webGLCompressionFormat: 0

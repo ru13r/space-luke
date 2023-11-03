@@ -39,11 +39,11 @@ namespace UI.Screens
             }
 
             _lines = new List<GameObject>();
-            var localPosition = new Vector3(0, -5, 0);
+            var localPosition = new Vector3(0, 140, 0);
             foreach (var scoreEntry in highScores.list)
             {
                 var line = Instantiate(highScoreLinePrefab, localPosition, Quaternion.identity);
-                line.GetComponent<RectTransform>().SetParent(gameObject.transform);
+                line.GetComponent<RectTransform>().SetParent(GameObject.Find("Canvas").transform, false);
                 line.transform.localPosition = localPosition;
                 line.transform.Find("Name").gameObject.GetComponent<TextMeshProUGUI>().text = scoreEntry.name;
                 line.transform.Find("Score").gameObject.GetComponent<TextMeshProUGUI>().text =
