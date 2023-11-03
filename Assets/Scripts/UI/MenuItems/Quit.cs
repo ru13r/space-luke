@@ -1,11 +1,11 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Menu
+namespace UI.MenuItems
 {
     public class Quit : MenuItem
     {
-        protected override void Execute()
+        public override void Execute()
         {
             if (SceneManager.GetActiveScene().name == "MainMenu")
                 Application.Quit();

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Menu
+namespace UI
 {
     public class MenuManager : MonoBehaviour
     {
@@ -26,6 +26,12 @@ namespace Menu
             if (_options == null || _options.Count == 0) return;
             if (Input.GetKeyDown(KeyCode.DownArrow)) SelectNext();
             if (Input.GetKeyDown(KeyCode.UpArrow)) SelectPrevious();
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return)) ExecuteMenuItem();
+        }
+
+        private void ExecuteMenuItem()
+        {
+            _options[_selectedIndex].Execute();
         }
 
         private void SelectNext()

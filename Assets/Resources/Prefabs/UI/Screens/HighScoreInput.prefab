@@ -352,8 +352,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1425315424124646728}
+  - component: {fileID: 8814856142323308288}
   m_Layer: 5
-  m_Name: HighScoreUI
+  m_Name: HighScoreInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -381,6 +382,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -66}
   m_SizeDelta: {x: 200, y: 134.1}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &8814856142323308288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3373435397996019992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41f6b7b2021a4d5dba7ac78761f2ab66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerNameField: {fileID: 9022240194468569580}
 --- !u!1 &3385649722070397045
 GameObject:
   m_ObjectHideFlags: 0
@@ -788,9 +802,9 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Managers.HighScoreManager, Assembly-CSharp
-        m_MethodName: ProcessInput
+      - m_Target: {fileID: 8814856142323308288}
+        m_TargetAssemblyTypeName: UI.Screens.HighScoreInput, Assembly-CSharp
+        m_MethodName: AddHighScore
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
