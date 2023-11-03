@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using Persistence;
+using TMPro;
 using UnityEngine;
 
 namespace UI.Screens
@@ -6,6 +8,8 @@ namespace UI.Screens
     public class HighScoreDisplay : GenericScreen
     {
         [SerializeField] private GameObject highScoreLinePrefab;
+        [SerializeField] private GameObject noHighScoreMessage;
+        private List<GameObject> _lines;
 
         private void Update()
         {
@@ -13,20 +17,38 @@ namespace UI.Screens
                 MyScreenManager.ChangeScreen(Globals.Screens.Menu);
         }
 
+        private void OnEnable()
+        {
+            MakeHighScoreList();
+        }
+
+        private void OnDisable()
+        {
+            foreach (var line in _lines) Destroy(line);
+        }
+
         private void MakeHighScoreList()
         {
             HighScoreList.Initialize();
             var highScores = HighScoreList.GetScores();
             if (highScores.list.Count < 1)
-                // display message that there are no entries
-                return;
-
-            var rotation = highScoreLinePrefab.transform.rotation;
-            var position = highScoreLinePrefab.transform.position;
-            foreach (var score in highScores.list)
             {
-                position += new Vector3(0, -25);
-                Instantiate(highScoreLinePrefab, position, rotation);
+                noHighScoreMessage.SetActive(true);
+                return;
+            }
+
+            _lines = new List<GameObject>();
+            var localPosition = new Vector3(0, -5, 0);
+            foreach (var scoreEntry in highScores.list)
+            {
+                var line = Instantiate(highScoreLinePrefab, localPosition, Quaternion.identity);
+                line.GetComponent<RectTransform>().SetParent(gameObject.transform);
+                line.transform.localPosition = localPosition;
+                line.transform.Find("Name").gameObject.GetComponent<TextMeshProUGUI>().text = scoreEntry.name;
+                line.transform.Find("Score").gameObject.GetComponent<TextMeshProUGUI>().text =
+                    scoreEntry.score.ToString();
+                _lines.Add(line);
+                localPosition += new Vector3(0, -25);
             }
         }
     }
